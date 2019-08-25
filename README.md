@@ -33,8 +33,8 @@ These values must be set as the Environment Variables `PWINTY3_MERCHANT_ID` and 
 or declared in your app using:
 
 ```ruby
-Pwinty3::MERCHANT_ID = 'your merchant id'
-Pwinty3::API_KEY = 'your api key'
+	Pwinty3::MERCHANT_ID = 'your merchant id'
+	Pwinty3::API_KEY = 'your api key'
 ```
 
 #### Production vs Sandbox
@@ -45,7 +45,7 @@ When you are ready to switch to the production endpoint, set the Environment Var
 constant in your app:
 
 ``` ruby
-Pwinty3::BASE_URL = 'https://api.pwinty.com'  # Without a trailing slash
+	Pwinty3::BASE_URL = 'https://api.pwinty.com'  # Without a trailing slash
 ```
 
 ## Development
