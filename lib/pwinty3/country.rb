@@ -8,8 +8,7 @@ module Pwinty3
 
 		def self.list
 			response = Pwinty3.conn.get("countries")
-			attributes = JSON.parse(response.body)
-			countries_data = attributes['data']
+			countries_data = response.body['data']
 
 			countries = []
 			countries_data.each do |attr|

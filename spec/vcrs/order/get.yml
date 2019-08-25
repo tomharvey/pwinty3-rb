@@ -7,8 +7,6 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Content-Type:
-      - application/json
       X-Pwinty-Merchantid:
       - "<MERCHANT_ID>"
       X-Pwinty-Rest-Api-Key:
@@ -49,11 +47,11 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Sun, 25 Aug 2019 10:09:58 GMT
+      - Sun, 25 Aug 2019 17:54:23 GMT
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"id":794822,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
         LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-24T17:20:41.687","lastUpdated":"2019-08-24T17:20:41.687","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
     http_version: 
-  recorded_at: Sun, 25 Aug 2019 10:09:58 GMT
+  recorded_at: Sun, 25 Aug 2019 17:54:23 GMT
 recorded_with: VCR 5.0.0

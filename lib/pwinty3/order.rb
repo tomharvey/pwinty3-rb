@@ -35,9 +35,8 @@ module Pwinty3
 
         def self.list
             response = Pwinty3.conn.get("orders?count=250&offset=0")
-            attributes = JSON.parse(response.body)
-            total_count = attributes['data']['count']
-            content = attributes['data']['content']
+            total_count = response.body['data']['count']
+            content = response.body['data']['content']
 
             # There is some bug with offset in the API.
 
@@ -64,34 +63,28 @@ module Pwinty3
 
         def self.count
             response = Pwinty3.conn.get("orders?count=1&offset=0")
-            attributes = JSON.parse(response.body)
-            attributes['data']['count']
+            response.body['data']['count']
         end
 
 
         def self.create(**args)
             response = Pwinty3.conn.post("orders", args.to_json)
-            attributes = JSON.parse(response.body)
-            p attributes['data']
-            new(attributes['data'])
+            new(response.body['data'])
         end
 
         def self.find(id)
             response = Pwinty3.conn.get("orders/#{id}")
-            attributes = JSON.parse(response.body)
-            new(attributes['data'])
+            new(response.body['data'])
         end
 
-        def update(**args)
-            response = Pwinty3.conn.put("orders/#{self.id}", args.to_json)
-            attributes = JSON.parse(response.body)
-            Pwinty3::Order.find(self.id)
+        def self.update(id, **args)
+            Pwinty3.conn.put("orders/#{id}", args.to_json)
+            Pwinty3::Order.find(id)
         end
 
         def submission_status
             response = Pwinty3.conn.get("orders/#{id}/SubmissionStatus")
-            attributes = JSON.parse(response.body)
-            Pwinty3::OrderStatus.new(attributes['data'])
+            Pwinty3::OrderStatus.new(response.body['data'])
         end
 
         def submit
@@ -108,12 +101,12 @@ module Pwinty3
 
         def add_image image
             response = Pwinty3.conn.post("orders/#{self.id}/images", image.to_json)
-            attributes = JSON.parse(response.body)
+            response.body
         end
 
         def add_images images
             response = Pwinty3.conn.post("orders/#{self.id}/images/batch", images.to_json)
-            attributes = JSON.parse(response.body)
+            response.body
         end
 
         protected

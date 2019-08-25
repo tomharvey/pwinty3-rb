@@ -43,5 +43,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "dry-struct"
   spec.add_dependency "faraday"
+  spec.add_dependency "faraday_middleware"
   spec.add_dependency "json"
 end

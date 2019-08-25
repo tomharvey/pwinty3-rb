@@ -32,19 +32,24 @@ RSpec.describe Pwinty3::Order do
 	end
 
 	it "can update an order" do
-		VCR.use_cassette('order/get') do
-	  		@order = Pwinty3::Order.find(794822)
-	  	end
-
 		VCR.use_cassette('order/update') do
-			new_order = @order.update(
+			minimal_order = Pwinty3::Order.create(
+		  		recipientName: "FirstName LastName",
+				countryCode: "US",
+				preferredShippingMethod: "Budget"
+		  	)
+
+			expect(minimal_order.id).to be_truthy
+
+			updated_order = Pwinty3::Order.update(
+				minimal_order.id,
 				address1: '1 Street',
 				addressTownOrCity: 'Las Vegas',
 				stateOrCounty: 'NV',
 				postalOrZipCode: '10001'
 			)
 
-			expect(new_order.address1).to eq('1 Street')
+			expect(updated_order.address1).to eq('1 Street')
 		end
 	end
 
@@ -60,7 +65,7 @@ RSpec.describe Pwinty3::Order do
 	it "can count orders" do
 		VCR.use_cassette('order/count') do
 			count = Pwinty3::Order.count
-			expect(count).to eq(464)
+			expect(count).to eq(467)
 		end
 	end
 

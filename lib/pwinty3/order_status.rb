@@ -13,8 +13,7 @@ module Pwinty3
 
 		def self.check(id)
 	      	response = Pwinty3.conn.get("orders/#{id}/SubmissionStatus")
-	      	attributes = JSON.parse(response.body)
-	      	new(attributes['data'])
+	      	new(response.body['data'])
 	    end
 	end
 end
