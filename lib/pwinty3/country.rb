@@ -1,4 +1,3 @@
-require 'dry-struct'
 require 'json'
 
 module Pwinty3
