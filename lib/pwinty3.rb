@@ -2,8 +2,12 @@ require 'faraday'
 
 require "pwinty3/base"
 require "pwinty3/country"
+require "pwinty3/image"
 require "pwinty3/order"
 require "pwinty3/order_status"
+require 'pwinty3/photo_status'
+require "pwinty3/shipment"
+require "pwinty3/shipping_info"
 require "pwinty3/version"
 
 module Pwinty3

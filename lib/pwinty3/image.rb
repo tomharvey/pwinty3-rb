@@ -14,7 +14,13 @@ module Pwinty3
 		attribute :previewUrl, Types::String
 		attribute :thumbnailUrl, Types::String
 		attribute :sku, Types::String
-		attribute :attributes, Types::Hash
+		attribute :attributes, Types::Hash.schema(
+			substrateWeight: Types::String,
+			frame: Types::String,
+			edge: Types::String,
+			paperType: Types::String,
+			frameColour: Types::String,
+		)
 		attribute :errorMessage, Types::String
 	end
 end

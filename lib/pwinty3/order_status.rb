@@ -1,14 +1,15 @@
 require 'json'
 
+require 'pwinty3/photo_status'
+
 module Pwinty3
 
-	class OrderStatus
-		attr_reader :id, :isValid, :generalErrors
-		def initialize(attributes)
-			@id = attributes['id'].to_i  # This endpoint returns ID as a string. Convert for consistency
-			@isValid = attributes['isValid']
-			@generalErrors = attributes['generalErrors']
-		end
+	class OrderStatus < Pwinty3::Base
+		attribute :id, Types::Coercible::Integer
+		attribute :isValid, Types::Bool
+		attribute :generalErrors, Types::Array.of(Types::String)
+		attribute :photos, Types::Array.of(Pwinty3::PhotoStatus)
+		
 
 		def self.check(id)
 	      	response = Pwinty3.conn.get("orders/#{id}/SubmissionStatus")

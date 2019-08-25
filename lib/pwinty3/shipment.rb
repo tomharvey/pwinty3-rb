@@ -2,18 +2,15 @@ require 'json'
 
 module Pwinty3
 
-	class Shipment
-		attr_reader :shipmentId, :isTracked, :trackingNumber, :trackingUrl, :earliestEstimatedArrivalDate, :latestEstimatedArrivalDate, :shippedOn, :carrier, :photoIds
-		def initialize(attributes)
-			@shipmentId = attributes['shipmentId']
-			@isTracked = attributes['isTracked']
-			@trackingNumber = attributes['trackingNumber']
-			@trackingUrl = attributes['trackingUrl']
-			@earliestEstimatedArrivalDate = attributes['earliestEstimatedArrivalDate']
-			@latestEstimatedArrivalDate = attributes['latestEstimatedArrivalDate']
-			@shippedOn = attributes['shippedOn']
-			@carrier = attributes['carrier']
-			@photoIds = attributes['photoIds']
-		end
+	class Shipment < Pwinty3::Base
+		attribute :shipmentId, Types::String
+		attribute :isTracked, Types::Bool
+		attribute :trackingNumber, Types::String
+		attribute :trackingUrl, Types::String
+		attribute :carrier, Types::String
+		attribute :photoIds, Types::Array.of(Types::Integer)
+		attribute :earliestEstimatedArrivalDate, Types::JSON::DateTime
+		attribute :latestEstimatedArrivalDate, Types::JSON::DateTime
+		attribute :shippedOn, Types::JSON::DateTime
 	end
 end

@@ -1,5 +1,7 @@
 require 'json'
 
+require "pwinty3/shipping_info"
+
 module Pwinty3
     class Order < Pwinty3::Base
         attribute :id, Types::Integer
@@ -14,8 +16,8 @@ module Pwinty3
         attribute :payment, Types::String
         attribute :paymentUrl, Types::String.optional
         attribute :price, Types::Integer
-        attribute :shippingInfo, Types::Hash
-        attribute :images, Types::Array
+        attribute :shippingInfo, Pwinty3::ShippingInfo
+        attribute :images, Types::Array.of(Pwinty3::Image)
         attribute :merchantOrderId, Types::String.optional
         attribute :preferredShippingMethod, Types::String
         attribute :mobileTelephone, Types::String.optional
@@ -70,6 +72,7 @@ module Pwinty3
         def self.create(**args)
             response = Pwinty3.conn.post("orders", args.to_json)
             attributes = JSON.parse(response.body)
+            p attributes['data']
             new(attributes['data'])
         end
 
