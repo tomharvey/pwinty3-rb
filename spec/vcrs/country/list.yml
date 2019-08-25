@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.pwinty.com/v3.0/countries
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Pwinty-Merchantid:
+      - "<MERCHANT_ID>"
+      X-Pwinty-Rest-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      Request-Context:
+      - appId=cid-v1:25960660-1811-400b-b0de-0ab970b09869
+      Access-Control-Expose-Headers:
+      - Request-Context
+      X-Powered-By:
+      - ASP.NET
+      Arr-Disable-Session-Affinity:
+      - 'True'
+      Date:
+      - Sun, 25 Aug 2019 10:09:56 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"name":"AFGHANISTAN","isoCode":"AF"},{"name":"ALAND ISLANDS","isoCode":"AX"},{"name":"ALBANIA","isoCode":"AL"},{"name":"ALGERIA","isoCode":"DZ"},{"name":"AMERICAN
+        SAMOA","isoCode":"AS"},{"name":"ANDORRA","isoCode":"AD"},{"name":"ANGOLA","isoCode":"AO"},{"name":"ANGUILLA","isoCode":"AI"},{"name":"ANTARCTICA","isoCode":"AQ"},{"name":"ANTIGUA
+        AND BARBUDA","isoCode":"AG"},{"name":"ARGENTINA","isoCode":"AR"},{"name":"ARMENIA","isoCode":"AM"},{"name":"ARUBA","isoCode":"AW"},{"name":"AUSTRALIA","isoCode":"AU"},{"name":"AUSTRIA","isoCode":"AT"},{"name":"AZERBAIJAN","isoCode":"AZ"},{"name":"BAHAMAS","isoCode":"BS"},{"name":"BAHRAIN","isoCode":"BH"},{"name":"BANGLADESH","isoCode":"BD"},{"name":"BARBADOS","isoCode":"BB"},{"name":"BELARUS","isoCode":"BY"},{"name":"BELGIUM","isoCode":"BE"},{"name":"BELIZE","isoCode":"BZ"},{"name":"BENIN","isoCode":"BJ"},{"name":"BERMUDA","isoCode":"BM"},{"name":"BHUTAN","isoCode":"BT"},{"name":"BOLIVIA","isoCode":"BO"},{"name":"BOSNIA
+        AND HERZEGOVINA","isoCode":"BA"},{"name":"BOTSWANA","isoCode":"BW"},{"name":"BOUVET
+        ISLAND","isoCode":"BV"},{"name":"BRAZIL","isoCode":"BR"},{"name":"BRITISH
+        INDIAN OCEAN TERRITORY","isoCode":"IO"},{"name":"BRUNEI DARUSSALAM","isoCode":"BN"},{"name":"BULGARIA","isoCode":"BG"},{"name":"BURKINA
+        FASO","isoCode":"BF"},{"name":"BURUNDI","isoCode":"BI"},{"name":"CAMBODIA","isoCode":"KH"},{"name":"CAMEROON","isoCode":"CM"},{"name":"CANADA","isoCode":"CA"},{"name":"CAPE
+        VERDE","isoCode":"CV"},{"name":"CAYMAN ISLANDS","isoCode":"KY"},{"name":"CENTRAL
+        AFRICAN REPUBLIC","isoCode":"CF"},{"name":"CHAD","isoCode":"TD"},{"name":"CHILE","isoCode":"CL"},{"name":"CHINA","isoCode":"CN"},{"name":"CHRISTMAS
+        ISLAND","isoCode":"CX"},{"name":"COCOS (KEELING) ISLANDS","isoCode":"CC"},{"name":"COLOMBIA","isoCode":"CO"},{"name":"COMOROS","isoCode":"KM"},{"name":"CONGO","isoCode":"CG"},{"name":"CONGO
+        THE DEMOCRATIC REPUBLIC OF THE","isoCode":"CD"},{"name":"COOK ISLANDS","isoCode":"CK"},{"name":"COSTA
+        RICA","isoCode":"CR"},{"name":"COTE D''IVOIRE","isoCode":"CI"},{"name":"CROATIA","isoCode":"HR"},{"name":"CUBA","isoCode":"CU"},{"name":"CYPRUS","isoCode":"CY"},{"name":"CZECH
+        REPUBLIC","isoCode":"CZ"},{"name":"DENMARK","isoCode":"DK"},{"name":"DJIBOUTI","isoCode":"DJ"},{"name":"DOMINICA","isoCode":"DM"},{"name":"DOMINICAN
+        REPUBLIC","isoCode":"DO"},{"name":"ECUADOR","isoCode":"EC"},{"name":"EGYPT","isoCode":"EG"},{"name":"EL
+        SALVADOR","isoCode":"SV"},{"name":"EQUATORIAL GUINEA","isoCode":"GQ"},{"name":"ERITREA","isoCode":"ER"},{"name":"ESTONIA","isoCode":"EE"},{"name":"ETHIOPIA","isoCode":"ET"},{"name":"FALKLAND
+        ISLANDS(MALVINAS)","isoCode":"FK"},{"name":"FAROE ISLANDS","isoCode":"FO"},{"name":"FIJI","isoCode":"FJ"},{"name":"FINLAND","isoCode":"FI"},{"name":"FRANCE","isoCode":"FR"},{"name":"FRENCH
+        GUIANA","isoCode":"GF"},{"name":"FRENCH POLYNESIA","isoCode":"PF"},{"name":"FRENCH
+        SOUTHERN TERRITORIES","isoCode":"TF"},{"name":"GABON","isoCode":"GA"},{"name":"GAMBIA","isoCode":"GM"},{"name":"GEORGIA","isoCode":"GE"},{"name":"GERMANY","isoCode":"DE"},{"name":"GHANA","isoCode":"GH"},{"name":"GIBRALTAR","isoCode":"GI"},{"name":"GREECE","isoCode":"GR"},{"name":"GREENLAND","isoCode":"GL"},{"name":"GRENADA","isoCode":"GD"},{"name":"GUADELOUPE","isoCode":"GP"},{"name":"GUAM","isoCode":"GU"},{"name":"GUATEMALA","isoCode":"GT"},{"name":"GUERNSEY","isoCode":"GG"},{"name":"GUINEA","isoCode":"GN"},{"name":"GUINEA-BISSAU","isoCode":"GW"},{"name":"GUYANA","isoCode":"GY"},{"name":"HAITI","isoCode":"HT"},{"name":"HEARD
+        ISLAND AND MCDONALD ISLANDS","isoCode":"HM"},{"name":"HOLY SEE (VATICAN CITY
+        STATE)","isoCode":"VA"},{"name":"HONDURAS","isoCode":"HN"},{"name":"HONG KONG","isoCode":"HK"},{"name":"HUNGARY","isoCode":"HU"},{"name":"ICELAND","isoCode":"IS"},{"name":"INDIA","isoCode":"IN"},{"name":"INDONESIA","isoCode":"ID"},{"name":"IRAN
+        ISLAMIC REPUBLIC OF","isoCode":"IR"},{"name":"IRAQ","isoCode":"IQ"},{"name":"IRELAND","isoCode":"IE"},{"name":"ISLE
+        OF MAN","isoCode":"IM"},{"name":"ISRAEL","isoCode":"IL"},{"name":"ITALY","isoCode":"IT"},{"name":"JAMAICA","isoCode":"JM"},{"name":"JAPAN","isoCode":"JP"},{"name":"JERSEY","isoCode":"JE"},{"name":"JORDAN","isoCode":"JO"},{"name":"KAZAKHSTAN","isoCode":"KZ"},{"name":"KENYA","isoCode":"KE"},{"name":"KIRIBATI","isoCode":"KI"},{"name":"KOREA
+        DEMOCRATIC PEOPLE''S REPUBLIC OF","isoCode":"KP"},{"name":"KOREA REPUBLIC
+        OF","isoCode":"KR"},{"name":"KOSOVO","isoCode":"XK"},{"name":"KUWAIT","isoCode":"KW"},{"name":"KYRGYZSTAN","isoCode":"KG"},{"name":"LAO
+        PEOPLE''S DEMOCRATIC REPUBLIC","isoCode":"LA"},{"name":"LATVIA","isoCode":"LV"},{"name":"LEBANON","isoCode":"LB"},{"name":"LESOTHO","isoCode":"LS"},{"name":"LIBERIA","isoCode":"LR"},{"name":"LIBYAN
+        ARAB JAMAHIRIYA","isoCode":"LY"},{"name":"LIECHTENSTEIN","isoCode":"LI"},{"name":"LITHUANIA","isoCode":"LT"},{"name":"LUXEMBOURG","isoCode":"LU"},{"name":"MACAO","isoCode":"MO"},{"name":"MACEDONIA
+        THE FORMER YUGOSLAV REPUBLIC OF","isoCode":"MK"},{"name":"MADAGASCAR","isoCode":"MG"},{"name":"MALAWI","isoCode":"MW"},{"name":"MALAYSIA","isoCode":"MY"},{"name":"MALDIVES","isoCode":"MV"},{"name":"MALI","isoCode":"ML"},{"name":"MALTA","isoCode":"MT"},{"name":"MARSHALL
+        ISLANDS","isoCode":"MH"},{"name":"MARTINIQUE","isoCode":"MQ"},{"name":"MAURITANIA","isoCode":"MR"},{"name":"MAURITIUS","isoCode":"MU"},{"name":"MAYOTTE","isoCode":"YT"},{"name":"MEXICO","isoCode":"MX"},{"name":"MICRONESIA
+        FEDERATED STATES OF","isoCode":"FM"},{"name":"MOLDOVA REPUBLIC OF","isoCode":"MD"},{"name":"MONACO","isoCode":"MC"},{"name":"MONGOLIA","isoCode":"MN"},{"name":"MONTENEGRO","isoCode":"ME"},{"name":"MONTSERRAT","isoCode":"MS"},{"name":"MOROCCO","isoCode":"MA"},{"name":"MOZAMBIQUE","isoCode":"MZ"},{"name":"MYANMAR","isoCode":"MM"},{"name":"NAMIBIA","isoCode":"NA"},{"name":"NAURU","isoCode":"NR"},{"name":"NEPAL","isoCode":"NP"},{"name":"NETHERLANDS","isoCode":"NL"},{"name":"NETHERLANDS
+        ANTILLES","isoCode":"AN"},{"name":"NEW CALEDONIA","isoCode":"NC"},{"name":"NEW
+        ZEALAND","isoCode":"NZ"},{"name":"NICARAGUA","isoCode":"NI"},{"name":"NIGER","isoCode":"NE"},{"name":"NIGERIA","isoCode":"NG"},{"name":"NIUE","isoCode":"NU"},{"name":"NORFOLK
+        ISLAND","isoCode":"NF"},{"name":"NORTHERN MARIANA ISLANDS","isoCode":"MP"},{"name":"NORWAY","isoCode":"NO"},{"name":"OMAN","isoCode":"OM"},{"name":"PAKISTAN","isoCode":"PK"},{"name":"PALAU","isoCode":"PW"},{"name":"PALESTINIAN
+        TERRITORY OCCUPIED","isoCode":"PS"},{"name":"PANAMA","isoCode":"PA"},{"name":"PAPUA
+        NEW GUINEA","isoCode":"PG"},{"name":"PARAGUAY","isoCode":"PY"},{"name":"PERU","isoCode":"PE"},{"name":"PHILIPPINES","isoCode":"PH"},{"name":"PITCAIRN","isoCode":"PN"},{"name":"POLAND","isoCode":"PL"},{"name":"PORTUGAL","isoCode":"PT"},{"name":"PUERTO
+        RICO","isoCode":"PR"},{"name":"QATAR","isoCode":"QA"},{"name":"REUNION","isoCode":"RE"},{"name":"ROMANIA","isoCode":"RO"},{"name":"RUSSIAN
+        FEDERATION","isoCode":"RU"},{"name":"RWANDA","isoCode":"RW"},{"name":"Saint
+        Barth?lemy","isoCode":"BL"},{"name":"SAINT HELENA","isoCode":"SH"},{"name":"SAINT
+        KITTS AND NEVIS","isoCode":"KN"},{"name":"SAINT LUCIA","isoCode":"LC"},{"name":"Saint
+        Martin","isoCode":"MF"},{"name":"SAINT PIERRE AND MIQUELON","isoCode":"PM"},{"name":"SAINT
+        VINCENT AND THE GRENADINES","isoCode":"VC"},{"name":"SAMOA","isoCode":"WS"},{"name":"SAN
+        MARINO","isoCode":"SM"},{"name":"SAO TOME AND PRINCIPE","isoCode":"ST"},{"name":"SAUDI
+        ARABIA","isoCode":"SA"},{"name":"SENEGAL","isoCode":"SN"},{"name":"SERBIA","isoCode":"RS"},{"name":"SERBIA
+        AND MONTENEGRO","isoCode":"CS"},{"name":"SEYCHELLES","isoCode":"SC"},{"name":"SIERRA
+        LEONE","isoCode":"SL"},{"name":"SINGAPORE","isoCode":"SG"},{"name":"Sint Maarten","isoCode":"SX"},{"name":"SLOVAKIA","isoCode":"SK"},{"name":"SLOVENIA","isoCode":"SI"},{"name":"SOLOMON
+        ISLANDS","isoCode":"SB"},{"name":"SOMALIA","isoCode":"SO"},{"name":"SOUTH
+        AFRICA","isoCode":"ZA"},{"name":"SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS","isoCode":"GS"},{"name":"SPAIN","isoCode":"ES"},{"name":"SRI
+        LANKA","isoCode":"LK"},{"name":"SUDAN","isoCode":"SD"},{"name":"SURINAME","isoCode":"SR"},{"name":"SVALBARD
+        AND JANMAYEN","isoCode":"SJ"},{"name":"SWAZILAND","isoCode":"SZ"},{"name":"SWEDEN","isoCode":"SE"},{"name":"SWITZERLAND","isoCode":"CH"},{"name":"SYRIAN
+        ARAB REPUBLIC","isoCode":"SY"},{"name":"TAIWAN PROVINCE OFCHINA","isoCode":"TW"},{"name":"TAJIKISTAN","isoCode":"TJ"},{"name":"TANZANIA
+        UNITED REPUBLIC OF","isoCode":"TZ"},{"name":"THAILAND","isoCode":"TH"},{"name":"TIMOR-LESTE","isoCode":"TL"},{"name":"TOGO","isoCode":"TG"},{"name":"TOKELAU","isoCode":"TK"},{"name":"TONGA","isoCode":"TO"},{"name":"TRINIDAD
+        ANDTOBAGO","isoCode":"TT"},{"name":"TUNISIA","isoCode":"TN"},{"name":"TURKEY","isoCode":"TR"},{"name":"TURKMENISTAN","isoCode":"TM"},{"name":"TURKS
+        AND CAICOSISLANDS","isoCode":"TC"},{"name":"TUVALU","isoCode":"TV"},{"name":"UGANDA","isoCode":"UG"},{"name":"UKRAINE","isoCode":"UA"},{"name":"UNITED
+        ARAB EMIR?ATES","isoCode":"AE"},{"name":"UNITED KINGDOM","isoCode":"GB"},{"name":"UNITED
+        STATES","isoCode":"US"},{"name":"UNITED STATES MINOR OUTLYING ISLANDS","isoCode":"UM"},{"name":"URUGUAY","isoCode":"UY"},{"name":"UZBEKISTAN","isoCode":"UZ"},{"name":"V1DUMMY","isoCode":"XX"},{"name":"VANUATU","isoCode":"VU"},{"name":"VENEZUELA","isoCode":"VE"},{"name":"VIETNAM","isoCode":"VN"},{"name":"VIRGIN
+        ISLANDS BRITISH","isoCode":"VG"},{"name":"VIRGIN ISLANDS U.S.","isoCode":"VI"},{"name":"WALLIS
+        AND FUTUNA","isoCode":"WF"},{"name":"WESTERN SAHARA","isoCode":"EH"},{"name":"YEMEN","isoCode":"YE"},{"name":"ZAMBIA","isoCode":"ZM"},{"name":"ZIMBABWE","isoCode":"ZW"}],"statusTxt":"OK","statusCode":200}'
+    http_version: 
+  recorded_at: Sun, 25 Aug 2019 10:09:56 GMT
+recorded_with: VCR 5.0.0

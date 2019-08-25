@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.pwinty.com/v3.0/orders
+    body:
+      encoding: UTF-8
+      string: '{"recipientName":"FirstName LastName","countryCode":"US","preferredShippingMethod":"Budget"}'
+    headers:
+      Content-Type:
+      - application/json
+      X-Pwinty-Merchantid:
+      - "<MERCHANT_ID>"
+      X-Pwinty-Rest-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      Request-Context:
+      - appId=cid-v1:25960660-1811-400b-b0de-0ab970b09869
+      Access-Control-Expose-Headers:
+      - Request-Context
+      X-Powered-By:
+      - ASP.NET
+      Arr-Disable-Session-Affinity:
+      - 'True'
+      Date:
+      - Sun, 25 Aug 2019 10:09:57 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"id":794836,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
+        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-25T10:09:57.2084124Z","lastUpdated":"2019-08-25T10:09:57.2084124Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
+    http_version: 
+  recorded_at: Sun, 25 Aug 2019 10:09:57 GMT
+recorded_with: VCR 5.0.0
