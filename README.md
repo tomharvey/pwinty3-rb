@@ -1,5 +1,7 @@
 # Pwinty3
 
+## THIS IS A WORK IN PROGRESS
+
 This wraps the Pwinty API at version 3 and aims to make your ruby life easier when interacting with the API.
 
 ## Installation
