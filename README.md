@@ -20,9 +20,7 @@ Or install it yourself as:
 
     $ gem install pwinty3
 
-## Usage
-
-### Configuration
+## Configuration
 You can use environment variables or you can declare the configuration in your app.
 
 #### Authentication
@@ -47,6 +45,91 @@ constant in your app:
 ``` ruby
 	Pwinty3::BASE_URL = 'https://api.pwinty.com'  # Without a trailing slash
 ```
+
+## Usage
+
+#### Create an order
+
+These are the minimum variables you need to send to the API to register your order, you'll want to add more or update later.
+
+See the `lib/pwinty3/order.rb` file or the [API documentation](https://pwinty.com/api/#orders-create)
+to understand the full list of attributes to send.
+
+``` ruby
+
+	order = Pwinty3::Order.create(
+  		recipientName: "FirstName LastName",
+		countryCode: "US",
+		preferredShippingMethod: "Budget"
+  	)
+
+```
+
+This create method will return a `Pwinty3::Order` object.
+
+#### Update an order
+
+Using the `order` object created in the above, we can update this using:
+
+``` ruby
+	updated_order = Pwinty3::Order.update(
+		order,
+		address1: '1 Street',
+	)
+```
+
+This update method will return a new `Pwinty3::Order` object.
+
+NB - Orders are immutable - you cannot run `order.update`
+you must pass an order object into the `Pwinty3::Order.update` method.
+
+#### Validate an order
+
+Before submitting you might want to validate the order and check all is well.
+
+``` ruby
+	status = order.submission_status
+```
+
+This will return a `Pwinty3::OrderStatus` object. See the [Api documentation](https://pwinty.com/api/#orders-validate)
+for more details of the shape of this reponse. But, you'll at least want the `status.isValid` method for a boolean
+check to see if it can be submitted.
+
+#### Add an Image to your Order
+
+TODO - pretty important piece left to do!
+
+
+#### Submit, Cancel or Hold an order
+
+Before you submit you should run Validate and ensure there are no errors.
+
+``` ruby
+	submitted? = order.submit
+
+	cancelled? = order.cancel
+
+	held? = order.hold
+```
+
+These methods will either submit your order for processing, or cancel/hold the processing. All return a boolean.
+
+#### List your orders
+
+``` ruby
+	orders = Pwinty3::Order.list
+```
+
+Will return an array of `Pwinty3::Order` objects.
+
+#### Count your orders
+
+``` ruby
+	count = Pwinty3::Order.count
+```
+Will return an integer of the number of orders you have.
+
+
 
 ## Development
 
