@@ -49,11 +49,11 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Sun, 25 Aug 2019 18:04:38 GMT
+      - Sun, 25 Aug 2019 18:11:27 GMT
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":794882,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
-        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-25T18:04:36.496551Z","lastUpdated":"2019-08-25T18:04:36.496551Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
+      string: '{"data":{"id":794885,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
+        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-25T18:11:27.0919664Z","lastUpdated":"2019-08-25T18:11:27.0919664Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
     http_version: 
-  recorded_at: Sun, 25 Aug 2019 18:04:38 GMT
+  recorded_at: Sun, 25 Aug 2019 18:11:27 GMT
 recorded_with: VCR 5.0.0

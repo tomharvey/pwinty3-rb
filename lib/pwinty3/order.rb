@@ -68,7 +68,7 @@ module Pwinty3
 
 
         def self.create(**args)
-            response = Pwinty3.conn.post("orders", args.to_json)
+            response = Pwinty3.conn.post("orders", args)
             new(response.body['data'])
         end
 
@@ -78,7 +78,7 @@ module Pwinty3
         end
 
         def self.update(id, **args)
-            Pwinty3.conn.put("orders/#{id}", args.to_json)
+            Pwinty3.conn.put("orders/#{id}", args)
             Pwinty3::Order.find(id)
         end
 
@@ -100,19 +100,19 @@ module Pwinty3
         end
 
         def add_image image
-            response = Pwinty3.conn.post("orders/#{self.id}/images", image.to_json)
+            response = Pwinty3.conn.post("orders/#{self.id}/images", image)
             response.body
         end
 
         def add_images images
-            response = Pwinty3.conn.post("orders/#{self.id}/images/batch", images.to_json)
+            response = Pwinty3.conn.post("orders/#{self.id}/images/batch", images)
             response.body
         end
 
         protected
 
         def update_status status
-            response = Pwinty3.conn.post("orders/#{self.id}/status", {status: status}.to_json)
+            response = Pwinty3.conn.post("orders/#{self.id}/status", {status: status})
             if response.status == 200
                 true
             else
