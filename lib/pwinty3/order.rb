@@ -40,19 +40,6 @@ module Pwinty3
 
             # There is some bug with offset in the API.
 
-            # while content.size < total_count
-            #   puts "#{content.size} is less than #{total_count}"
-            #   puts "#{content[0]['id']} to #{content[-1]['id']}"
-            #   offset = content.size
-            #   puts offset
-            #   response = Pwinty3.conn.get("orders?count=250&offset=#{offset}")
-            #   attributes = JSON.parse(response.body)
-            #   new_content = attributes['data']['content']
-            #   puts "#{new_content[0]['id']} to #{new_content[-1]['id']}"
-            #   content += new_content
-            # end
-            # puts "#{content.size} orders colected"
-
             orders = []
             content.each do |order_attr|
                 orders << new(order_attr)
