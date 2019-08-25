@@ -20,7 +20,8 @@ module Pwinty3
 
 	MERCHANT_ID = ENV['PWINTY3_MERCHANT_ID']
 	API_KEY = ENV['PWINTY3_API_KEY']
-	BASE_URL = ENV['PWINTY3_BASE_URL'] || 'https://sandbox.pwinty.com/v3.0/'
+	BASE_URL = ENV['PWINTY3_BASE_URL'] || 'https://sandbox.pwinty.com'
+	API_VERSION = 'v3.0'
 
 	HEADERS = {
 		'X-Pwinty-MerchantId' => Pwinty3::MERCHANT_ID,
@@ -28,7 +29,8 @@ module Pwinty3
 	}
 
 	def self.conn
-		Faraday.new(url: Pwinty3::BASE_URL, headers: Pwinty3::HEADERS) do |config|
+		url = "#{Pwinty3::BASE_URL}/#{Pwinty3::API_VERSION}/"
+		Faraday.new(url: url, headers: Pwinty3::HEADERS) do |config|
   			config.request :json
   			config.response :json
   			config.use Pwinty3::HttpErrors

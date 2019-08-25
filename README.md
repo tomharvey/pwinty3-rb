@@ -1,8 +1,6 @@
 # Pwinty3
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pwinty3`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This wraps the Pwinty API at version 3 and aims to make your ruby life easier when interacting with the API.
 
 ## Installation
 
@@ -22,11 +20,37 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Configuration
+You can use environment variables or you can declare the configuration in your app.
+
+#### Authentication
+To authenticate requests you must get your merchant ID and API Key from the
+[Integration Settings in the Pwinty Dashboard](https://beta-dashboard.pwinty.com/settings/integrations).
+
+These values must be set as the Environment Variables `PWINTY3_MERCHANT_ID` and `PWINTY3_API_KEY`
+or declared in your app using:
+
+```ruby
+Pwinty3::MERCHANT_ID = 'your merchant id'
+Pwinty3::API_KEY = 'your api key'
+```
+
+#### Production vs Sandbox
+The Pwinty API provides a sandbox endpoint to test and develop against at `https://sandbox.pwinty.com`. This is the default
+endpoint used by this library.
+
+When you are ready to switch to the production endpoint, set the Environment Variable `PWINTY3_BASE_URL` or declare the
+constant in your app:
+
+``` ruby
+Pwinty3::BASE_URL = 'https://api.pwinty.com'  # Without a trailing slash
+```
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bundle` to install dependencies. Then, run `rake` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+The tests use VCRs to mock the responses from Pwinty's API.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
