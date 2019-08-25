@@ -58,7 +58,8 @@ RSpec.describe Pwinty3::Order do
 			orders = Pwinty3::Order.list
 
 			expect(orders[0]).to be_kind_of(Pwinty3::Order)
-			expect(orders.count).to eq(100)  # This should be 462 but there is a problem with the API?
+			# This should be equal to Order.count but there is a problem with the API's pagination
+			expect(orders.count).to eq(100)
 		end
 	end
 
