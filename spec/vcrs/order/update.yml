@@ -49,19 +49,20 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Sun, 25 Aug 2019 18:11:28 GMT
+      - Sun, 25 Aug 2019 18:46:21 GMT
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":794886,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
-        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-25T18:11:28.542643Z","lastUpdated":"2019-08-25T18:11:28.542643Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
+      string: '{"data":{"id":794893,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
+        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-25T18:46:20.9645964Z","lastUpdated":"2019-08-25T18:46:20.9645964Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
     http_version: 
-  recorded_at: Sun, 25 Aug 2019 18:11:28 GMT
+  recorded_at: Sun, 25 Aug 2019 18:46:21 GMT
 - request:
     method: put
-    uri: https://sandbox.pwinty.com/v3.0/orders/794886
+    uri: https://sandbox.pwinty.com/v3.0/orders/794893/
     body:
       encoding: UTF-8
-      string: '{"address1":"1 Street","addressTownOrCity":"Las Vegas","stateOrCounty":"NV","postalOrZipCode":"10001"}'
+      string: '{"id":794893,"address1":"1 Street","address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
+        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-25T18:46:20+00:00","lastUpdated":"2019-08-25T18:46:20+00:00","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"errorMessage":null,"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"tag":null}'
     headers:
       X-Pwinty-Merchantid:
       - "<MERCHANT_ID>"
@@ -77,19 +78,21 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 500
-      message: Internal Server Error
+      code: 200
+      message: OK
     headers:
       Cache-Control:
       - no-cache
       Pragma:
       - no-cache
-      Content-Length:
-      - '124'
+      Transfer-Encoding:
+      - chunked
       Content-Type:
       - application/json; charset=utf-8
       Expires:
       - "-1"
+      Vary:
+      - Accept-Encoding
       Server:
       - Microsoft-IIS/10.0
       X-Aspnet-Version:
@@ -103,11 +106,11 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Sun, 25 Aug 2019 18:11:30 GMT
+      - Sun, 25 Aug 2019 18:46:21 GMT
     body:
-      encoding: UTF-8
-      string: '{"data":null,"statusTxt":"An error occurred : Something unexpected
-        happened while processing this request","statusCode":500}'
+      encoding: ASCII-8BIT
+      string: '{"data":{"id":794893,"address1":"1 Street","address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
+        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-25T18:46:20.967","lastUpdated":"2019-08-25T18:46:21.6597527Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
     http_version: 
-  recorded_at: Sun, 25 Aug 2019 18:11:30 GMT
+  recorded_at: Sun, 25 Aug 2019 18:46:21 GMT
 recorded_with: VCR 5.0.0

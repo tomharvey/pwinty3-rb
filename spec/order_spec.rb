@@ -42,14 +42,14 @@ RSpec.describe Pwinty3::Order do
 			expect(minimal_order.id).to be_truthy
 
 			updated_order = Pwinty3::Order.update(
-				minimal_order.id,
+				minimal_order,
 				address1: '1 Street',
-				addressTownOrCity: 'Las Vegas',
-				stateOrCounty: 'NV',
-				postalOrZipCode: '10001'
 			)
 
 			expect(updated_order.address1).to eq('1 Street')
+			expect(updated_order.recipientName).to eq('FirstName LastName')
+			expect(updated_order.countryCode).to eq('US')
+			expect(updated_order.preferredShippingMethod).to eq('Budget')
 		end
 	end
 

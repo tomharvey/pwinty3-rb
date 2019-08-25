@@ -77,9 +77,10 @@ module Pwinty3
             new(response.body['data'])
         end
 
-        def self.update(id, **args)
-            Pwinty3.conn.put("orders/#{id}", args)
-            Pwinty3::Order.find(id)
+        def self.update(order, **args)
+            update_body = order.to_hash.merge(args)
+            response = Pwinty3.conn.put("orders/#{order.id}/", update_body)
+            new(response.body['data'])
         end
 
         def submission_status
