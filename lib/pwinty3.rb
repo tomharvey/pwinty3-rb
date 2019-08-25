@@ -22,7 +22,6 @@ module Pwinty3
 	BASE_URL = ENV['PWINTY3_BASE_URL'] || 'https://sandbox.pwinty.com/v3.0/'
 
 	HEADERS = {
-		# 'Content-Type' => 'application/json',
 		'X-Pwinty-MerchantId' => Pwinty3::MERCHANT_ID,
 		'X-Pwinty-REST-API-Key' => Pwinty3::API_KEY,
 	}

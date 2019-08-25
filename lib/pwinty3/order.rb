@@ -120,21 +120,5 @@ module Pwinty3
             end
         end
 
-        def buildShippingObjects shipments_attrs
-            shipments = []
-            shipments_attrs.each do |shipment_attrs|
-                shipments << Pwinty3::Shipment.new(shipment_attrs)
-            end
-            shipments
-        end
-
-        def buildImageObjects images_attrs
-            images = []
-            images_attrs.each do |image_attrs|
-                images << Pwinty3::Image.new(image_attrs)
-            end
-            images
-        end
-
     end
 end
