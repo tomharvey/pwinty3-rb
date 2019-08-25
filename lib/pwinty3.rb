@@ -3,6 +3,7 @@ require 'faraday_middleware'
 
 require "pwinty3/base"
 require "pwinty3/country"
+require "pwinty3/http_errors"
 require "pwinty3/image"
 require "pwinty3/order"
 require "pwinty3/order_status"
@@ -15,7 +16,7 @@ module Pwinty3
 	class Error < StandardError; end
 	class AuthenticationError < Pwinty3::Error; end
 	class OrderNotFound < Pwinty3::Error; end
-	class AlreadySubmitted < Pwinty3::Error; end
+	class StateIsInvalid < Pwinty3::Error; end
 
 	MERCHANT_ID = ENV['PWINTY3_MERCHANT_ID']
 	API_KEY = ENV['PWINTY3_API_KEY']
@@ -30,6 +31,7 @@ module Pwinty3
 		Faraday.new(url: Pwinty3::BASE_URL, headers: Pwinty3::HEADERS) do |config|
   			config.request :json
   			config.response :json
+  			config.use Pwinty3::HttpErrors
   			config.adapter Faraday.default_adapter
 		end
 	end

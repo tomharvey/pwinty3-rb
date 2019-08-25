@@ -65,7 +65,7 @@ RSpec.describe Pwinty3::Order do
 	it "can count orders" do
 		VCR.use_cassette('order/count') do
 			count = Pwinty3::Order.count
-			expect(count).to eq(467)
+			expect(count).to be > 467
 		end
 	end
 
