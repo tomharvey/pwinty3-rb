@@ -4,6 +4,8 @@
 
 This wraps the Pwinty API at version 3 and aims to make your ruby life easier when interacting with the API.
 
+See http://pwinty.com and https://pwinty.com/api for more details around teh core service.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -56,13 +58,11 @@ See the `lib/pwinty3/order.rb` file or the [API documentation](https://pwinty.co
 to understand the full list of attributes to send.
 
 ``` ruby
-
-	order = Pwinty3::Order.create(
-  		recipientName: "FirstName LastName",
-		countryCode: "US",
-		preferredShippingMethod: "Budget"
-  	)
-
+order = Pwinty3::Order.create(
+		recipientName: "FirstName LastName",
+	countryCode: "US",
+	preferredShippingMethod: "Budget"
+	)
 ```
 
 This create method will return a `Pwinty3::Order` object.
@@ -72,10 +72,10 @@ This create method will return a `Pwinty3::Order` object.
 Using the `order` object created in the above, we can update this using:
 
 ``` ruby
-	updated_order = Pwinty3::Order.update(
-		order,
-		address1: '1 Street',
-	)
+updated_order = Pwinty3::Order.update(
+	order,
+	address1: '1 Street',
+)
 ```
 
 This update method will return a new `Pwinty3::Order` object.
@@ -88,7 +88,7 @@ you must pass an order object into the `Pwinty3::Order.update` method.
 Before submitting you might want to validate the order and check all is well.
 
 ``` ruby
-	status = order.submission_status
+status = order.submission_status
 ```
 
 This will return a `Pwinty3::OrderStatus` object. See the [Api documentation](https://pwinty.com/api/#orders-validate)
@@ -105,11 +105,11 @@ TODO - pretty important piece left to do!
 Before you submit you should run Validate and ensure there are no errors.
 
 ``` ruby
-	submitted? = order.submit
+submitted? = order.submit
 
-	cancelled? = order.cancel
+cancelled? = order.cancel
 
-	held? = order.hold
+held? = order.hold
 ```
 
 These methods will either submit your order for processing, or cancel/hold the processing. All return a boolean.
@@ -117,7 +117,7 @@ These methods will either submit your order for processing, or cancel/hold the p
 #### List your orders
 
 ``` ruby
-	orders = Pwinty3::Order.list
+orders = Pwinty3::Order.list
 ```
 
 Will return an array of `Pwinty3::Order` objects.
@@ -125,7 +125,7 @@ Will return an array of `Pwinty3::Order` objects.
 #### Count your orders
 
 ``` ruby
-	count = Pwinty3::Order.count
+count = Pwinty3::Order.count
 ```
 Will return an integer of the number of orders you have.
 
@@ -141,7 +141,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/pwinty3. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tomharvey/pwinty3-rb/issues. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -149,4 +149,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Pwinty3 project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/pwinty3/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Pwinty3 project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/tomharvey/pwinty3-rb/blob/master/CODE_OF_CONDUCT.md).
