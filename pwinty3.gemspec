@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tom@alush.co.uk"]
 
   spec.summary       = %q{Order photo prints through Pwinty}
-  spec.homepage      = "https://github.com/tomharvey/pwinty3"
+  spec.homepage      = "https://github.com/tomharvey/pwinty3-rb"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   if spec.respond_to?(:metadata)
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
-    spec.metadata["homepage_uri"] = spec.homepage
+    spec.metadata["homepage_uri"] = "https://pwinty.com/api/"
     spec.metadata["source_code_uri"] = spec.homepage
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
