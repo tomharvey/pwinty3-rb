@@ -1,9 +1,12 @@
-require 'json'
+require 'dry/struct/with_setters'
 
 require "pwinty3/shipping_info"
 
 module Pwinty3
     class Order < Pwinty3::Base
+        include Dry::Struct::Setters
+        include Dry::Struct::Setters::MassAssignment
+
         attribute :id, Types::Integer
         attribute :address1, Types::String.optional
         attribute :address2, Types::String.optional
@@ -58,10 +61,10 @@ module Pwinty3
             new(response.body['data'])
         end
 
-        def self.update(order, **args)
-            update_body = order.to_hash.merge(args)
-            response = Pwinty3.conn.put("orders/#{order.id}/", update_body)
-            new(response.body['data'])
+        def update(**args)
+            update_body = self.to_hash.merge(args)
+            response = Pwinty3.conn.put("orders/#{self.id}/", update_body)
+            self.assign_attributes(response.body['data'])
         end
 
         def submission_status

@@ -33,23 +33,22 @@ RSpec.describe Pwinty3::Order do
 
 	it "can update an order" do
 		VCR.use_cassette('order/update') do
-			minimal_order = Pwinty3::Order.create(
+			order = Pwinty3::Order.create(
 		  		recipientName: "FirstName LastName",
 				countryCode: "US",
 				preferredShippingMethod: "Budget"
 		  	)
 
-			expect(minimal_order.id).to be_truthy
-
-			updated_order = Pwinty3::Order.update(
-				minimal_order,
-				address1: '1 Street',
+			order.update(
+				address1: 'House number',
+				address2: 'Street address'
 			)
 
-			expect(updated_order.address1).to eq('1 Street')
-			expect(updated_order.recipientName).to eq('FirstName LastName')
-			expect(updated_order.countryCode).to eq('US')
-			expect(updated_order.preferredShippingMethod).to eq('Budget')
+			expect(order.address1).to eq('House number')
+			expect(order.address2).to eq('Street address')
+			expect(order.recipientName).to eq('FirstName LastName')
+			expect(order.countryCode).to eq('US')
+			expect(order.preferredShippingMethod).to eq('Budget')
 		end
 	end
 
