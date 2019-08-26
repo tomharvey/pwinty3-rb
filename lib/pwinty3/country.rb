@@ -8,18 +8,7 @@ module Pwinty3
 
 		def self.list
 			response = Pwinty3.conn.get("countries")
-			countries = collate_results(response.body['data'])
-			countries
-		end
-
-		protected
-
-		def self.collate_results(countries_data)
-			countries = []
-			countries_data.each do |attr|
-				countries << new(attr)
-			end
-			countries
+			Pwinty3.collate_results(response.body['data'], self)
 		end
 	end
 end

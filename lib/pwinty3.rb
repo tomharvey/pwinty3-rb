@@ -40,4 +40,12 @@ module Pwinty3
             config.adapter Faraday.default_adapter
         end
     end
+
+    def self.collate_results(response_data, classType)
+        collection = []
+        response_data.each do |individual_attr|
+            collection << classType.new(individual_attr)
+        end
+        collection
+    end
 end

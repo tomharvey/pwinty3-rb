@@ -36,16 +36,9 @@ module Pwinty3
         def self.list
             response = Pwinty3.conn.get("orders?count=250&offset=0")
             r_data = response.body['data']
-            total_count = r_data['count']
-            content = r_data['content']
-
-            # There is some bug with offset in the API.
-
-            orders = []
-            content.each do |order_attr|
-                orders << new(order_attr)
-            end
-            orders
+            # TODO There is some bug with offset in the API.
+            # total_count = r_data['count']
+            Pwinty3.collate_results(r_data['content'], self)
         end
 
 
