@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pwinty3 (1.0.0)
+    pwinty3 (1.0.1)
       dry-struct (~> 1.0)
       dry-struct-setters (~> 0.2)
       faraday (~> 0.15)
