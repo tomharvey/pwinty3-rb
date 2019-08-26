@@ -87,16 +87,12 @@ This create method will return a `Pwinty3::Order` object.
 Using the `order` object created in the above, we can update this using:
 
 ``` ruby
-updated_order = Pwinty3::Order.update(
-    original_order,
+order.update(
     address1: '1 Street',
 )
 ```
 
-This update method will return a new `Pwinty3::Order` object.
-
-NB - Orders are immutable - you cannot run `order.update`
-you must pass an order object into the `Pwinty3::Order.update` method.
+This update method will update the `Pwinty3::Order` object.
 
 #### Validate an Order
 
