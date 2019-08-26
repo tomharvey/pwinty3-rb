@@ -95,11 +95,7 @@ module Pwinty3
 
         def update_status status
             response = Pwinty3.conn.post("orders/#{self.id}/status", {status: status})
-            if response.status == 200
-                true
-            else
-                false
-            end
+            response.status == 200
         end
 
     end
