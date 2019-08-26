@@ -29,6 +29,8 @@ Or install it yourself as:
 
     $ gem install pwinty3
 
+ And include in your app with `require "pwinty3"`
+
 ## Configuration
 You can use environment variables or you can declare the configuration in your
 app.
@@ -142,15 +144,18 @@ On completion there will be a list of `Pwinty3::Image` objects associated with `
 Before you submit you should run Validate and ensure there are no errors.
 
 ``` ruby
-submitted = order.submit
+order.submit
+>>> true
 
-cancelled = order.cancel
+order.cancel
+>>> true
 
-held = order.hold
+order.hold
+>>> true
 ```
 
 These methods will either submit your order for processing, or cancel/hold the
-processing. All return a boolean.
+processing. Each will return a boolean.
 
 ### Check the shipment status of a submitted Order
 
