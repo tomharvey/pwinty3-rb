@@ -8,9 +8,11 @@
 [![Known Vulnerabilities](https://snyk.io//test/github/tomharvey/pwinty3-rb/badge.svg?targetFile=Gemfile.lock)](https://snyk.io//test/github/tomharvey/pwinty3-rb?targetFile=Gemfile.lock)
 
 
-This wraps the Pwinty API at version 3 and aims to make your ruby life easier when interacting with the API.
+This wraps the Pwinty API at version 3 and aims to make your ruby life easier
+when interacting with the API.
 
-See http://pwinty.com and https://pwinty.com/api for more details around teh core service.
+See http://pwinty.com and https://pwinty.com/api for more details around the
+core service.
 
 ## Installation
 
@@ -29,13 +31,16 @@ Or install it yourself as:
     $ gem install pwinty3
 
 ## Configuration
-You can use environment variables or you can declare the configuration in your app.
+You can use environment variables or you can declare the configuration in your
+app.
 
 #### Authentication
 To authenticate requests you must get your merchant ID and API Key from the
-[Integration Settings in the Pwinty Dashboard](https://beta-dashboard.pwinty.com/settings/integrations).
+[Integration Settings in the Pwinty Dashboard]
+(https://beta-dashboard.pwinty.com/settings/integrations).
 
-These values must be set as the Environment Variables `PWINTY3_MERCHANT_ID` and `PWINTY3_API_KEY`
+These values must be set as the Environment Variables
+`PWINTY3_MERCHANT_ID` and `PWINTY3_API_KEY`
 or declared in your app using:
 
 ```ruby
@@ -44,10 +49,12 @@ Pwinty3::API_KEY = 'your api key'
 ```
 
 #### Production vs Sandbox
-The Pwinty API provides a sandbox endpoint to test and develop against at `https://sandbox.pwinty.com`. This is the default
+The Pwinty API provides a sandbox endpoint to test and develop against at
+`https://sandbox.pwinty.com`. This is the default
 endpoint used by this library.
 
-When you are ready to switch to the production endpoint, set the Environment Variable `PWINTY3_BASE_URL` or declare the
+When you are ready to switch to the production endpoint, set the
+Environment Variable `PWINTY3_BASE_URL` or declare the
 constant in your app:
 
 ``` ruby
@@ -58,9 +65,11 @@ Pwinty3::BASE_URL = 'https://api.pwinty.com'  # Without a trailing slash
 
 #### Create an order
 
-These are the minimum variables you need to send to the API to register your order, you'll want to add more or update later.
+These are the minimum variables you need to send to the API to register your
+order, you'll want to add more or update later.
 
-See the `lib/pwinty3/order.rb` file or the [API documentation](https://pwinty.com/api/#orders-create)
+See the `lib/pwinty3/order.rb` file or the
+[API documentation](https://pwinty.com/api/#orders-create)
 to understand the full list of attributes to send.
 
 ``` ruby
@@ -97,8 +106,10 @@ Before submitting you might want to validate the order and check all is well.
 status = order.submission_status
 ```
 
-This will return a `Pwinty3::OrderStatus` object. See the [Api documentation](https://pwinty.com/api/#orders-validate)
-for more details of the shape of this reponse. But, you'll at least want the `status.isValid` method for a boolean
+This will return a `Pwinty3::OrderStatus` object. See the
+[Api documentation](https://pwinty.com/api/#orders-validate)
+for more details of the shape of this reponse. But, you'll at least want the
+`status.isValid` method for a boolean
 check to see if it can be submitted.
 
 #### Add an Image to your Order
@@ -118,7 +129,8 @@ cancelled? = order.cancel
 held? = order.hold
 ```
 
-These methods will either submit your order for processing, or cancel/hold the processing. All return a boolean.
+These methods will either submit your order for processing, or cancel/hold the
+processing. All return a boolean.
 
 #### List your orders
 
@@ -139,20 +151,33 @@ Will return an integer of the number of orders you have.
 
 ## Development
 
-After checking out the repo, run `bundle` to install dependencies. Then, run `rake` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bundle` to install dependencies. Then, run
+`rake` to run the tests. You can also run `bin/console` for an interactive
+prompt that will allow you to experiment.
 
 The tests use VCRs to mock the responses from Pwinty's API.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`.
+To release a new version, update the version number in `version.rb`, and then
+run `bundle exec rake release`, which will create a git tag for the version,
+push git commits and tags, and push the `.gem` file to
+[rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/tomharvey/pwinty3-rb/issues. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at
+https://github.com/tomharvey/pwinty3-rb/issues. This project is intended to be
+a safe, welcoming space for collaboration, and contributors are expected to
+adhere to the [Contributor Covenant](http://contributor-covenant.org)
+code of conduct.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the
+[MIT License](https://opensource.org/licenses/MIT).
 
 ## Code of Conduct
 
-Everyone interacting in the Pwinty3 project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/tomharvey/pwinty3-rb/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Pwinty3 project’s codebases, issue trackers, chat
+rooms and mailing lists is expected to follow the
+[code of conduct](https://github.com/tomharvey/pwinty3-rb/blob/master/CODE_OF_CONDUCT.md).
