@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tom@alush.co.uk"]
 
   spec.summary       = %q{Order photo prints through Pwinty}
-  spec.description   = "WORK IN PROGRESS - This wraps the Pwinty API at version 3 and aims to make your ruby life easier when interacting with the API."
+  spec.description   = "This wraps the Pwinty API at version 3 and aims to make your ruby life easier when interacting with the API."
   spec.homepage      = "https://github.com/tomharvey/pwinty3-rb"
   spec.license       = "MIT"
 
