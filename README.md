@@ -1,7 +1,5 @@
 # Pwinty3
 
-## THIS IS A WORK IN PROGRESS
-
 [![Build Status](https://travis-ci.org/tomharvey/pwinty3-rb.svg?branch=master)](https://travis-ci.org/tomharvey/pwinty3-rb)
 [![Gem Version](https://badge.fury.io/rb/pwinty3.svg)](https://badge.fury.io/rb/pwinty3)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/e92699eebe92f2db5758/test_coverage)](https://codeclimate.com/github/tomharvey/pwinty3-rb/test_coverage)
@@ -63,7 +61,7 @@ Pwinty3::BASE_URL = 'https://api.pwinty.com'  # Without a trailing slash
 
 ## Usage
 
-#### Create an Order
+### Create an Order
 
 These are the minimum variables you need to send to the API to register your
 order, you'll want to add more or update later.
@@ -82,19 +80,19 @@ order = Pwinty3::Order.create(
 
 This create method will return a `Pwinty3::Order` object.
 
-#### Update an Order
+### Update an Order
 
 Using the `order` object created in the above, we can update this using:
 
 ``` ruby
 order.update(
-    address1: '1 Street',
+    address1: 'Street Name',
 )
 ```
 
 This update method will update the `Pwinty3::Order` object.
 
-#### Validate an Order
+### Validate an Order
 
 Before submitting you might want to validate the order and check all is well.
 
@@ -108,7 +106,7 @@ for more details of the shape of this reponse. But, you'll at least want the
 `status.isValid` method for a boolean
 check to see if it can be submitted.
 
-#### Add an Image to your Order
+### Add an Image to your Order
 
 Add a single image by passing a hash to:
 
@@ -139,7 +137,7 @@ order.add_images([
 On completion there will be a list of `Pwinty3::Image` objects associated with `order.images`
 
 
-#### Submit, Cancel or Hold an order
+### Submit, Cancel or Hold an order
 
 Before you submit you should run Validate and ensure there are no errors.
 
@@ -154,30 +152,32 @@ held = order.hold
 These methods will either submit your order for processing, or cancel/hold the
 processing. All return a boolean.
 
-#### Check the shipment status of a submitted Order
+### Check the shipment status of a submitted Order
 
 Once created you can use the `find` method to get the most up to date info about an Order.
 Following submission, this will contain a shippingInfo with a price for shipping and 
 a list of `Pwinty3::Shipment` objects
 
 ``` ruby
-	order = Pwinty3::Order.find(1)
-	order.shippingInfo.price
-	>>> 500
+order = Pwinty3::Order.find(1)
+order.shippingInfo.price
+>>> 500
 
-	order.shippingInfo.shipments[0]
-	>>> #<Pwinty3::Shipment shipmentId="1" isTracked=true trackingNumber="XYZ123456ABC" ...
+order.shippingInfo.shipments[0]
+>>> #<Pwinty3::Shipment shipmentId="1" isTracked=true trackingNumber="XYZ123456ABC" ...
 ```
 
-#### List your orders
+### List your orders
 
 ``` ruby
 orders = Pwinty3::Order.list
 ```
+**N.B - There appears to be an issue with the pagination of the list results from the API.
+So you can only get the latest 100 results at this moment.** 
 
 Will return an array of `Pwinty3::Order` objects.
 
-#### Count your orders
+### Count your orders
 
 ``` ruby
 count = Pwinty3::Order.count
