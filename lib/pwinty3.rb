@@ -28,8 +28,11 @@ module Pwinty3
         'X-Pwinty-REST-API-Key' => Pwinty3::API_KEY,
     }
 
+    def self.url
+        "#{Pwinty3::BASE_URL}/#{Pwinty3::API_VERSION}/"
+    end
+
     def self.conn
-        url = "#{Pwinty3::BASE_URL}/#{Pwinty3::API_VERSION}/"
         Faraday.new(url: url, headers: Pwinty3::HEADERS) do |config|
             config.request :json
             config.response :json
