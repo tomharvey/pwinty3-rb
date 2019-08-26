@@ -2,6 +2,7 @@
 
 ## THIS IS A WORK IN PROGRESS
 
+[![Build Status](https://travis-ci.org/tomharvey/pwinty3-rb.svg?branch=master)](https://travis-ci.org/tomharvey/pwinty3-rb)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e92699eebe92f2db5758/maintainability)](https://codeclimate.com/github/tomharvey/pwinty3-rb/maintainability)
 [![Known Vulnerabilities](https://snyk.io//test/github/tomharvey/pwinty3-rb/badge.svg?targetFile=Gemfile.lock)](https://snyk.io//test/github/tomharvey/pwinty3-rb?targetFile=Gemfile.lock)
 
