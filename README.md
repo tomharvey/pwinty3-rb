@@ -2,6 +2,8 @@
 
 ## THIS IS A WORK IN PROGRESS
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/e92699eebe92f2db5758/maintainability)](https://codeclimate.com/github/tomharvey/pwinty3-rb/maintainability)
+
 This wraps the Pwinty API at version 3 and aims to make your ruby life easier when interacting with the API.
 
 See http://pwinty.com and https://pwinty.com/api for more details around teh core service.
