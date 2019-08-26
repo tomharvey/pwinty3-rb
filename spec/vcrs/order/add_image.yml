@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.pwinty.com/v3.0/orders/794885/images/batch
+    body:
+      encoding: UTF-8
+      string: '[{"sku":"GLOBAL-PHO-4X6-PRO","url":"http://example.com/mytestphoto.jpg","copies":1}]'
+    headers:
+      X-Pwinty-Merchantid:
+      - "<MERCHANT_ID>"
+      X-Pwinty-Rest-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      Request-Context:
+      - appId=cid-v1:25960660-1811-400b-b0de-0ab970b09869
+      Access-Control-Expose-Headers:
+      - Request-Context
+      X-Powered-By:
+      - ASP.NET
+      Arr-Disable-Session-Affinity:
+      - 'True'
+      Date:
+      - Mon, 26 Aug 2019 12:38:42 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"items":[{"id":1001850,"sku":"GLOBAL-PHO-4X6-PRO","url":"http://example.com/mytestphoto.jpg","status":"NotYetDownloaded","copies":1,"sizing":"Crop","priceToUser":null,"price":0,"md5Hash":null,"previewUrl":null,"thumbnailUrl":null,"attributes":null,"errorMessage":null}]},"statusTxt":"OK","statusCode":200}'
+    http_version: 
+  recorded_at: Mon, 26 Aug 2019 12:38:42 GMT
+recorded_with: VCR 5.0.0

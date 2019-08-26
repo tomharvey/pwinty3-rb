@@ -7,10 +7,10 @@ module Pwinty3
 		attribute :copies, Types::Integer
 		attribute :sizing, Types::String
 		attribute :price, Types::Integer
-		attribute :priceToUser, Types::Integer
-		attribute :md5Hash, Types::String
-		attribute :previewUrl, Types::String
-		attribute :thumbnailUrl, Types::String
+		attribute :priceToUser, Types::Integer.optional
+		attribute :md5Hash, Types::String.optional
+		attribute :previewUrl, Types::String.optional
+		attribute :thumbnailUrl, Types::String.optional
 		attribute :sku, Types::String
 		attribute :attributes, Types::Hash.schema(
 			substrateWeight: Types::String,
@@ -18,7 +18,7 @@ module Pwinty3
 			edge: Types::String,
 			paperType: Types::String,
 			frameColour: Types::String,
-		)
-		attribute :errorMessage, Types::String
+		).optional
+		attribute :errorMessage, Types::String.optional
 	end
 end

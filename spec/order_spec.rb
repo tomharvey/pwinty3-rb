@@ -85,4 +85,56 @@ RSpec.describe Pwinty3::Order do
 	  	end
   	end
 
+  	it "can add an image to an order" do
+  		VCR.use_cassette('order/create') do
+	  		@order = Pwinty3::Order.create(
+		  		recipientName: "FirstName LastName",
+				countryCode: "US",
+				preferredShippingMethod: "Budget"
+		  	)
+	  	end
+
+	  	VCR.use_cassette('order/add_image') do
+	  		@order.add_image(
+	  			sku: "GLOBAL-PHO-4X6-PRO",
+	  			url: "http://example.com/mytestphoto.jpg",
+	  			copies: 1,
+	  		)
+	  	end
+
+	  	expect(@order.images.count).to eq 1
+	  	expect(@order.images[0].status).to eq "NotYetDownloaded"
+	  	expect(@order.images[0].copies).to eq 1
+  	end
+
+  	it "can add an image to an order" do
+  		VCR.use_cassette('order/add_multi_images') do
+	  		order = Pwinty3::Order.create(
+		  		recipientName: "FirstName LastName",
+				countryCode: "US",
+				preferredShippingMethod: "Budget"
+		  	)
+		  	expect(order.images.count).to eq 0
+	  	
+	  		order.add_images(
+	  			[{
+		  			sku: "GLOBAL-PHO-4X6-PRO",
+		  			url: "http://example.com/myTestPhoto.jpg",
+		  			copies: 1,
+		  		}, {
+		  			sku: "GLOBAL-PHO-10X12-PRO",
+		  			url: "http://example.com/myLargeTestPhoto.jpg",
+		  			copies: 1,
+		  		}]
+	  		)
+
+		  	expect(order.images.count).to eq 2
+
+		  	order.images.each do |order_image|
+		  		expect(order_image.status).to eq "NotYetDownloaded"
+			  	expect(order_image.copies).to eq 1
+		  	end
+		 end
+  	end
+
 end

@@ -110,7 +110,33 @@ check to see if it can be submitted.
 
 #### Add an Image to your Order
 
-TODO - pretty important piece left to do!
+Add a single image by passing a hash to:
+
+``` ruby
+order.add_image(
+	sku: "GLOBAL-PHO-4X6-PRO",
+	url: "http://example.com/mytestphoto.jpg",
+	copies: 1,
+)
+```
+
+or you can add multiple images by passing a list of hashes to the pluralised method:
+
+``` ruby
+order.add_images([
+	{
+		sku: "GLOBAL-PHO-4X6-PRO",
+		url: "http://example.com/myTestPhoto.jpg",
+		copies: 1,
+	}, {
+		sku: "GLOBAL-PHO-10X12-PRO",
+		url: "http://example.com/myLargeTestPhoto.jpg",
+		copies: 1,
+	}
+])
+```
+
+On completion there will be a list of `Pwinty3::Image` objects associated with `order.images`
 
 
 #### Submit, Cancel or Hold an order
