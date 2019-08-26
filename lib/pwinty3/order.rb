@@ -35,9 +35,9 @@ module Pwinty3
 
         def self.list
             response = Pwinty3.conn.get("orders?count=250&offset=0")
-            r_body = response.body
-            total_count = r_body['data']['count']
-            content = r_body['data']['content']
+            r_data = response.body['data']
+            total_count = r_data['count']
+            content = r_data['content']
 
             # There is some bug with offset in the API.
 
