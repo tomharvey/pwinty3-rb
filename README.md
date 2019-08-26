@@ -82,6 +82,17 @@ order = Pwinty3::Order.create(
 
 This create method will return a `Pwinty3::Order` object.
 
+### Get an existing Order from the API
+
+Once an order is created you can retreive it from the API to further manage it,
+or if it has been submitted you can see the latest production and shipping details.
+
+``` ruby
+order = Pwinty3::Order.find(1)  # Pass the ID returned when you created the Order
+```
+
+This method will return a `Pwinty3::Order` object.
+
 ### Update an Order
 
 Using the `order` object created in the above, we can update this using:
