@@ -1,5 +1,3 @@
-require 'json'
-
 module Pwinty3
 
 	class PhotoStatus < Pwinty3::Base

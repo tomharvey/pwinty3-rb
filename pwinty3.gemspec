@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "simplecov", "~> 0.17"
 
   spec.add_dependency "dry-struct", "~> 1.0"
+  spec.add_dependency "dry-struct-setters", "~> 0.2"
   spec.add_dependency "faraday", "~> 0.15"
   spec.add_dependency "faraday_middleware", "~> 0.13"
   spec.add_dependency "json", "~> 2.2"

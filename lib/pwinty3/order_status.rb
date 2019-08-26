@@ -1,5 +1,3 @@
-require 'json'
-
 require 'pwinty3/photo_status'
 
 module Pwinty3

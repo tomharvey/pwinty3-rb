@@ -1,5 +1,3 @@
-require 'json'
-
 require "pwinty3/shipment"
 
 module Pwinty3

@@ -1,5 +1,3 @@
-require 'json'
-
 module Pwinty3
 
 	class Image < Pwinty3::Base
