@@ -65,9 +65,9 @@ to understand the full list of attributes to send.
 
 ``` ruby
 order = Pwinty3::Order.create(
-	recipientName: "FirstName LastName",
-	countryCode: "US",
-	preferredShippingMethod: "Budget"
+    recipientName: "FirstName LastName",
+    countryCode: "US",
+    preferredShippingMethod: "Budget"
 )
 ```
 
@@ -79,8 +79,8 @@ Using the `order` object created in the above, we can update this using:
 
 ``` ruby
 updated_order = Pwinty3::Order.update(
-	order,
-	address1: '1 Street',
+    order,
+    address1: '1 Street',
 )
 ```
 
