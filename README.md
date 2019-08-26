@@ -19,7 +19,7 @@ core service.
 
 Add this line to your application's Gemfile:
 
-```ruby
+``` ruby
 gem 'pwinty3'
 ```
 
@@ -37,14 +37,13 @@ app.
 
 #### Authentication
 To authenticate requests you must get your merchant ID and API Key from the
-[Integration Settings in the Pwinty Dashboard]
-(https://beta-dashboard.pwinty.com/settings/integrations).
+[Integration Settings in the Pwinty Dashboard](https://beta-dashboard.pwinty.com/settings/integrations).
 
 These values must be set as the Environment Variables
 `PWINTY3_MERCHANT_ID` and `PWINTY3_API_KEY`
 or declared in your app using:
 
-```ruby
+``` ruby
 Pwinty3::MERCHANT_ID = 'your merchant id'
 Pwinty3::API_KEY = 'your api key'
 ```
@@ -64,7 +63,7 @@ Pwinty3::BASE_URL = 'https://api.pwinty.com'  # Without a trailing slash
 
 ## Usage
 
-#### Create an order
+#### Create an Order
 
 These are the minimum variables you need to send to the API to register your
 order, you'll want to add more or update later.
@@ -83,13 +82,13 @@ order = Pwinty3::Order.create(
 
 This create method will return a `Pwinty3::Order` object.
 
-#### Update an order
+#### Update an Order
 
 Using the `order` object created in the above, we can update this using:
 
 ``` ruby
 updated_order = Pwinty3::Order.update(
-    order,
+    original_order,
     address1: '1 Street',
 )
 ```
@@ -99,7 +98,7 @@ This update method will return a new `Pwinty3::Order` object.
 NB - Orders are immutable - you cannot run `order.update`
 you must pass an order object into the `Pwinty3::Order.update` method.
 
-#### Validate an order
+#### Validate an Order
 
 Before submitting you might want to validate the order and check all is well.
 
@@ -108,7 +107,7 @@ status = order.submission_status
 ```
 
 This will return a `Pwinty3::OrderStatus` object. See the
-[Api documentation](https://pwinty.com/api/#orders-validate)
+[API documentation](https://pwinty.com/api/#orders-validate)
 for more details of the shape of this reponse. But, you'll at least want the
 `status.isValid` method for a boolean
 check to see if it can be submitted.
