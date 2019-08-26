@@ -14,7 +14,7 @@ module Pwinty3
 
 		protected
 
-		def collate_results countries_data
+		def self.collate_results(countries_data)
 			countries = []
 			countries_data.each do |attr|
 				countries << new(attr)
