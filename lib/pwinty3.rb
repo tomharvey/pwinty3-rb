@@ -19,21 +19,32 @@ module Pwinty3
     class StateIsInvalid < Pwinty3::Error; end
 
     MERCHANT_ID = ENV['PWINTY3_MERCHANT_ID']
-    API_KEY = ENV['PWINTY3_API_KEY']
-    BASE_URL = ENV['PWINTY3_BASE_URL'] || 'https://sandbox.pwinty.com'
+    API_KEY     = ENV['PWINTY3_API_KEY']
+    BASE_URL    = ENV['PWINTY3_BASE_URL'] || 'https://sandbox.pwinty.com'
     API_VERSION = 'v3.0'
 
-    HEADERS = {
-        'X-Pwinty-MerchantId' => Pwinty3::MERCHANT_ID,
-        'X-Pwinty-REST-API-Key' => Pwinty3::API_KEY,
-    }
+    class << self
+        attr_accessor :logger
+        def logger
+            @logger ||= Logger.new($stdout).tap do |log|
+                log.progname = self.name
+            end
+        end
+    end
 
     def self.url
         "#{Pwinty3::BASE_URL}/#{Pwinty3::API_VERSION}/"
     end
 
+    def self.headers
+        {
+            'X-Pwinty-MerchantId' => Pwinty3::MERCHANT_ID,
+            'X-Pwinty-REST-API-Key' => Pwinty3::API_KEY,
+        }
+    end
+
     def self.conn
-        Faraday.new(url: url, headers: Pwinty3::HEADERS) do |config|
+        Faraday.new(url: url, headers: headers) do |config|
             config.request :json
             config.response :json
             config.use Pwinty3::HttpErrors

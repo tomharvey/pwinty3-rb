@@ -144,15 +144,30 @@ On completion there will be a list of `Pwinty3::Image` objects associated with `
 Before you submit you should run Validate and ensure there are no errors.
 
 ``` ruby
-submitted? = order.submit
+submitted = order.submit
 
-cancelled? = order.cancel
+cancelled = order.cancel
 
-held? = order.hold
+held = order.hold
 ```
 
 These methods will either submit your order for processing, or cancel/hold the
 processing. All return a boolean.
+
+#### Check the shipment status of a submitted Order
+
+Once created you can use the `find` method to get the most up to date info about an Order.
+Following submission, this will contain a shippingInfo with a price for shipping and 
+a list of `Pwinty3::Shipment` objects
+
+``` ruby
+	order = Pwinty3::Order.find(1)
+	order.shippingInfo.price
+	>>> 500
+
+	order.shippingInfo.shipments[0]
+	>>> #<Pwinty3::Shipment shipmentId="1" isTracked=true trackingNumber="XYZ123456ABC" ...
+```
 
 #### List your orders
 

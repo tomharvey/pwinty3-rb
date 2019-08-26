@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.pwinty.com/v3.0/orders/795041
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Pwinty-Merchantid:
+      - "<MERCHANT_ID>"
+      X-Pwinty-Rest-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      Request-Context:
+      - appId=cid-v1:25960660-1811-400b-b0de-0ab970b09869
+      Access-Control-Expose-Headers:
+      - Request-Context
+      X-Powered-By:
+      - ASP.NET
+      Arr-Disable-Session-Affinity:
+      - 'True'
+      Date:
+      - Mon, 26 Aug 2019 13:11:11 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"id":795041,"address1":"My House","address2":null,"postalOrZipCode":"G1
+        3XX","countryCode":"GB","addressTownOrCity":"Glasgow","recipientName":"Tom
+        Harvey","stateOrCounty":"Scotland","status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":500,"shipments":[{"carrier":"UK
+        NonLiveShippingInfoService Postal Service","photoIds":[1001905],"shipmentId":null,"trackingNumber":null,"trackingUrl":null,"isTracked":false,"earliestEstimatedArrivalDate":"2019-08-27T00:00:00Z","latestEstimatedArrivalDate":"2019-08-29T23:59:59Z","shippedOn":null}]},"images":[{"id":1001905,"sku":"GLOBAL-PHO-4X6-PRO","url":"https://github.com/tomharvey/pwinty3-rb/raw/master/spec/TestImage.jpg","status":"Ok","copies":1,"sizing":"Crop","priceToUser":null,"price":0,"md5Hash":"5b2860286dc2146bec8a1f4e23f1740c","previewUrl":"https://pwintyimages.blob.core.windows.net/imagestorage-sandbox/795041/00000000-0000-0000-0000-000000000000.jpeg?sv=2018-03-28&sr=b&sig=iyDHwzNpLyArlelPkzgB63lLnlQjEDyO12vGS2glm3k%3D&se=2019-09-26T13%3A11%3A11Z&sp=rw","thumbnailUrl":"https://pwintyimages.blob.core.windows.net/imagestorage-sandbox/795041/11903ac6-a851-401e-b7ca-78a9d193df4c.jpeg?sv=2018-03-28&sr=b&sig=moOuk42f5Mhosg8jqi8JQ0u52HoMh1THhoGSa2WkVOg%3D&se=2019-09-26T13%3A11%3A11Z&sp=rw","attributes":null,"errorMessage":null}],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-26T13:02:22.12","lastUpdated":"2019-08-26T13:10:57.157","canCancel":true,"canHold":false,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
+    http_version: 
+  recorded_at: Mon, 26 Aug 2019 13:11:11 GMT
+- request:
+    method: post
+    uri: https://sandbox.pwinty.com/v3.0/orders/795041/status
+    body:
+      encoding: UTF-8
+      string: '{"status":"AwaitingPayment"}'
+    headers:
+      X-Pwinty-Merchantid:
+      - "<MERCHANT_ID>"
+      X-Pwinty-Rest-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '151'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/10.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      Request-Context:
+      - appId=cid-v1:25960660-1811-400b-b0de-0ab970b09869
+      Access-Control-Expose-Headers:
+      - Request-Context
+      X-Powered-By:
+      - ASP.NET
+      Arr-Disable-Session-Affinity:
+      - 'True'
+      Date:
+      - Mon, 26 Aug 2019 13:11:13 GMT
+    body:
+      encoding: UTF-8
+      string: '{"data":null,"statusTxt":"Transition to state AwaitingPayment from
+        status NotYetSubmitted with payment option InvoiceMe is not valid","statusCode":400}'
+    http_version: 
+  recorded_at: Mon, 26 Aug 2019 13:11:13 GMT
+recorded_with: VCR 5.0.0

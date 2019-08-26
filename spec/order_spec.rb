@@ -137,4 +137,58 @@ RSpec.describe Pwinty3::Order do
 		 end
   	end
 
+  	it "can build and submit a valid order" do
+  		VCR.use_cassette('order/end_to_end') do
+  			order = Pwinty3::Order.create(
+  				recipientName: "Tom Harvey",
+  				address1: "My House",
+  				addressTownOrCity: "Glasgow",
+  				stateOrCounty: "Scotland",
+  				postalOrZipCode: "G1 3XX",
+  				countryCode: "GB",
+  				preferredShippingMethod: "Budget",	
+			)
+
+			order.add_image(
+				sku: "GLOBAL-PHO-4X6-PRO",
+	  			url: "https://github.com/tomharvey/pwinty3-rb/raw/master/spec/TestImage.jpg",
+	  			copies: 1,
+			)
+
+			submitted = order.submit
+
+			expect(submitted).to be true
+  		end
+  	end
+
+  	it "can get the shipment info from a submitted order" do
+  		VCR.use_cassette('order/submitted_shipment') do
+  			order = Pwinty3::Order.find(795042)
+
+  			expect(order.shippingInfo.price).to eq 500
+  			expect(order.shippingInfo.shipments[0].trackingNumber).to eq 'XYZ123456ABC'
+  		end
+  	end
+
+  	it "cannot hold or cancel a submitted order" do
+  		VCR.use_cassette('order/hold_cancel_fail') do
+  			order = Pwinty3::Order.find(795042)
+
+  			cancelled = order.cancel
+  			expect(cancelled).to be false
+
+  			held = order.hold
+  			expect(held).to be false
+  		end
+  	end
+
+  	it "can cancel an unsubmitted order" do
+  		VCR.use_cassette('order/cancel_success') do
+  			order = Pwinty3::Order.find(795041)
+
+  			cancelled = order.cancel
+  			expect(cancelled).to be true
+  		end
+  	end
+
 end
