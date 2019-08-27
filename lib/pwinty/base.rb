@@ -1,6 +1,6 @@
 require 'dry-struct'
 
-module Pwinty3
+module Pwinty
 
 	module Types
   		include Dry::Types()

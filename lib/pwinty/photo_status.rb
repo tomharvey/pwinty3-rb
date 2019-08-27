@@ -1,6 +1,6 @@
-module Pwinty3
+module Pwinty
 
-	class PhotoStatus < Pwinty3::Base
+	class PhotoStatus < Pwinty::Base
 		attribute :id, Types::Coercible::Integer
 		attribute :errors, Types::Array.of(Types::String)
 		attribute :warnings, Types::Array.of(Types::String)

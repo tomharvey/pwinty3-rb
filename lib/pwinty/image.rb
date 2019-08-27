@@ -1,6 +1,6 @@
-module Pwinty3
+module Pwinty
 
-	class Image < Pwinty3::Base
+	class Image < Pwinty::Base
 		attribute :id, Types::Integer
 		attribute :url, Types::String
 		attribute :status, Types::String

@@ -2,7 +2,7 @@ require 'simplecov'
 SimpleCov.start
 
 require "bundler/setup"
-require "pwinty3"
+require "pwinty"
 require "vcr"
 
 RSpec.configure do |config|
@@ -20,6 +20,6 @@ end
 VCR.configure do |c|
   c.cassette_library_dir = "spec/vcrs"
   c.hook_into :webmock
-  c.filter_sensitive_data('<API_KEY>') { Pwinty3::API_KEY }
-  c.filter_sensitive_data('<MERCHANT_ID>') { Pwinty3::MERCHANT_ID }
+  c.filter_sensitive_data('<API_KEY>') { Pwinty::API_KEY }
+  c.filter_sensitive_data('<MERCHANT_ID>') { Pwinty::MERCHANT_ID }
 end

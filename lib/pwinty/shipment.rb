@@ -1,6 +1,6 @@
-module Pwinty3
+module Pwinty
 
-	class Shipment < Pwinty3::Base
+	class Shipment < Pwinty::Base
 		attribute :shipmentId, Types::String.optional
 		attribute :isTracked, Types::Bool
 		attribute :trackingNumber, Types::String.optional

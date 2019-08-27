@@ -1,9 +1,9 @@
 require 'dry/struct/with_setters'
 
-require "pwinty3/shipping_info"
+require "pwinty/shipping_info"
 
-module Pwinty3
-    class Order < Pwinty3::Base
+module Pwinty
+    class Order < Pwinty::Base
         include Dry::Struct::Setters
         include Dry::Struct::Setters::MassAssignment
 
@@ -13,14 +13,14 @@ module Pwinty3
         attribute :postalOrZipCode, Types::String.optional
         attribute :countryCode, Types::String
         attribute :addressTownOrCity, Types::String.optional
-        attribute :recipientName, Types::String
+        attribute :recipientName, Types::String.optional
         attribute :stateOrCounty, Types::String.optional
         attribute :status, Types::String
         attribute :payment, Types::String
         attribute :paymentUrl, Types::String.optional
         attribute :price, Types::Integer
-        attribute :shippingInfo, Pwinty3::ShippingInfo
-        attribute :images, Types::Array.of(Pwinty3::Image)
+        attribute :shippingInfo, Pwinty::ShippingInfo
+        attribute :images, Types::Array.of(Pwinty::Image)
         attribute :merchantOrderId, Types::String.optional
         attribute :preferredShippingMethod, Types::String
         attribute :mobileTelephone, Types::String.optional
@@ -37,39 +37,39 @@ module Pwinty3
         attribute :tag, Types::String.optional
 
         def self.list
-            response = Pwinty3.conn.get("orders?count=250&offset=0")
+            response = Pwinty.conn.get("orders?count=250&offset=0")
             r_data = response.body['data']
             # TODO There is some bug with offset in the API.
             # total_count = r_data['count']
-            Pwinty3.collate_results(r_data['content'], self)
+            Pwinty.collate_results(r_data['content'], self)
         end
 
 
         def self.count
-            response = Pwinty3.conn.get("orders?count=1&offset=0")
+            response = Pwinty.conn.get("orders?count=1&offset=0")
             response.body['data']['count']
         end
 
 
         def self.create(**args)
-            response = Pwinty3.conn.post("orders", args)
+            response = Pwinty.conn.post("orders", args)
             new(response.body['data'])
         end
 
         def self.find(id)
-            response = Pwinty3.conn.get("orders/#{id}")
+            response = Pwinty.conn.get("orders/#{id}")
             new(response.body['data'])
         end
 
         def update(**args)
             update_body = self.to_hash.merge(args)
-            response = Pwinty3.conn.put("orders/#{self.id}/", update_body)
+            response = Pwinty.conn.put("orders/#{self.id}/", update_body)
             self.assign_attributes(response.body['data'])
         end
 
         def submission_status
-            response = Pwinty3.conn.get("orders/#{id}/SubmissionStatus")
-            Pwinty3::OrderStatus.new(response.body['data'])
+            response = Pwinty.conn.get("orders/#{id}/SubmissionStatus")
+            Pwinty::OrderStatus.new(response.body['data'])
         end
 
         def submit
@@ -90,18 +90,18 @@ module Pwinty3
         end
 
         def add_images images
-            response = Pwinty3.conn.post("orders/#{self.id}/images/batch", images)
-            images = Pwinty3.collate_results(response.body['data']['items'], Pwinty3::Image)
+            response = Pwinty.conn.post("orders/#{self.id}/images/batch", images)
+            images = Pwinty.collate_results(response.body['data']['items'], Pwinty::Image)
             self.images = self.images + images
         end
 
         protected
 
         def update_status status
-            response = Pwinty3.conn.post("orders/#{self.id}/status", {status: status})
+            response = Pwinty.conn.post("orders/#{self.id}/status", {status: status})
             success = response.status == 200
             unless success
-                Pwinty3.logger.warn response.body['statusTxt']
+                Pwinty.logger.warn response.body['statusTxt']
             end
             success
         end

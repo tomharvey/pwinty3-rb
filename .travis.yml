@@ -17,7 +17,7 @@ deploy:
   provider: rubygems
   api_key:
     secure: kJP6MUaAZIlcGd3WC/3Cky/Mn0AwszGciN7J4oYLbDcYRT1s4Ga4Z/Zy2c7tyDr58dOf5Vgi4NKfqy8LDrw4QkRXp16zYEmiGLGuj1fv6PBRlOCBufFxotytkSXdqEzohOiC4xb+uT2Y0S/MOoOUphSxMzxGZtCfsUQgBOH108ybDRpKHmYgkuh1FRHIoT6kkSBL6aEgstQ0NlgxDDET0wYmoQ6FIjDyom9+yH14lW7Tf5R1YwNmHlHC7Z5VWQcANtxIi2BmJfzOQXO5N22cnoJh39+c1UsLEWgATjYJ0haI9hhleS+BoC0iAaaofbZmQFtIdlNk42zlMjYo9luG+cEVPsIj/u/G5BStOspMKVxnJIKCSY+stmyKZiZfZGZA+NTC3p6kVWXzR2ECWDpjpc2X+9ZbLHHNGY5o+rU3QZfK3WjQePU29XMbGgcFhwWd/4KRX2ty/km90uizJT8MXjsvvzjfJKtF8WsKi1MPEioI3y1qmJC1q/H0H6IbvyS6e41jmt3hXg1W+V98NbuUQtP5TWqqJ8ZnHti9EuR5YJAHDIzinQc1tBttr14ipOipnwCxDanbuJtr9UYSRQ6Dihkb/JvzyDEJFco+HLhoELNsgQa4qJ2z84Mpu/l16xxz+Ta3t8ChodN8q6E99frNfsQ5bUwrUzluUtnmZFgnuus=
-  gem: pwinty3
+  gem: pwinty
   on:
     tags: true
     repo: tomharvey/pwinty3-rb

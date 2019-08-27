@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "pwinty3/version"
+require "pwinty/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "pwinty3"
-  spec.version       = Pwinty3::VERSION
+  spec.name          = "pwinty"
+  spec.version       = Pwinty::VERSION
   spec.authors       = ["Thomas Harvey"]
   spec.email         = ["tom@alush.co.uk"]
 

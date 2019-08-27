@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pwinty3 (1.0.1)
+    pwinty (3.0.0)
       dry-struct (~> 1.0)
       dry-struct-setters (~> 0.2)
       faraday (~> 0.15)
@@ -86,7 +86,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.17)
-  pwinty3!
+  pwinty!
   rake (~> 10.0)
   rspec (~> 3.0)
   simplecov (~> 0.17)

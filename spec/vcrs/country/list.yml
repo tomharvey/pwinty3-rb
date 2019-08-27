@@ -47,7 +47,7 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Sun, 25 Aug 2019 18:11:26 GMT
+      - Tue, 27 Aug 2019 12:29:36 GMT
     body:
       encoding: ASCII-8BIT
       string: '{"data":[{"name":"AFGHANISTAN","isoCode":"AF"},{"name":"ALAND ISLANDS","isoCode":"AX"},{"name":"ALBANIA","isoCode":"AL"},{"name":"ALGERIA","isoCode":"DZ"},{"name":"AMERICAN
@@ -107,5 +107,5 @@ http_interactions:
         ISLANDS BRITISH","isoCode":"VG"},{"name":"VIRGIN ISLANDS U.S.","isoCode":"VI"},{"name":"WALLIS
         AND FUTUNA","isoCode":"WF"},{"name":"WESTERN SAHARA","isoCode":"EH"},{"name":"YEMEN","isoCode":"YE"},{"name":"ZAMBIA","isoCode":"ZM"},{"name":"ZIMBABWE","isoCode":"ZW"}],"statusTxt":"OK","statusCode":200}'
     http_version: 
-  recorded_at: Sun, 25 Aug 2019 18:11:26 GMT
+  recorded_at: Tue, 27 Aug 2019 12:29:36 GMT
 recorded_with: VCR 5.0.0

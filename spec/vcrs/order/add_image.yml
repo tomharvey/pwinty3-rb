@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://sandbox.pwinty.com/v3.0/orders/794885/images/batch
+    uri: https://sandbox.pwinty.com/v3.0/orders/795145/images/batch
     body:
       encoding: UTF-8
       string: '[{"sku":"GLOBAL-PHO-4X6-PRO","url":"http://example.com/mytestphoto.jpg","copies":1}]'
@@ -49,10 +49,10 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Mon, 26 Aug 2019 12:38:42 GMT
+      - Tue, 27 Aug 2019 12:32:26 GMT
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"items":[{"id":1001850,"sku":"GLOBAL-PHO-4X6-PRO","url":"http://example.com/mytestphoto.jpg","status":"NotYetDownloaded","copies":1,"sizing":"Crop","priceToUser":null,"price":0,"md5Hash":null,"previewUrl":null,"thumbnailUrl":null,"attributes":null,"errorMessage":null}]},"statusTxt":"OK","statusCode":200}'
+      string: '{"data":{"items":[{"id":1002065,"sku":"GLOBAL-PHO-4X6-PRO","url":"http://example.com/mytestphoto.jpg","status":"NotYetDownloaded","copies":1,"sizing":"Crop","priceToUser":null,"price":0,"md5Hash":null,"previewUrl":null,"thumbnailUrl":null,"attributes":null,"errorMessage":null}]},"statusTxt":"OK","statusCode":200}'
     http_version: 
-  recorded_at: Mon, 26 Aug 2019 12:38:42 GMT
+  recorded_at: Tue, 27 Aug 2019 12:32:26 GMT
 recorded_with: VCR 5.0.0

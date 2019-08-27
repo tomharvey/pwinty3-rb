@@ -49,16 +49,16 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Mon, 26 Aug 2019 12:48:45 GMT
+      - Tue, 27 Aug 2019 12:30:23 GMT
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":795013,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
-        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-26T12:48:45.4536336Z","lastUpdated":"2019-08-26T12:48:45.4536336Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
+      string: '{"data":{"id":795143,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
+        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-27T12:30:22.9550377Z","lastUpdated":"2019-08-27T12:30:22.9550377Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
     http_version: 
-  recorded_at: Mon, 26 Aug 2019 12:48:45 GMT
+  recorded_at: Tue, 27 Aug 2019 12:30:23 GMT
 - request:
     method: post
-    uri: https://sandbox.pwinty.com/v3.0/orders/795013/images/batch
+    uri: https://sandbox.pwinty.com/v3.0/orders/795143/images/batch
     body:
       encoding: UTF-8
       string: '[{"sku":"GLOBAL-PHO-4X6-PRO","url":"http://example.com/myTestPhoto.jpg","copies":1},{"sku":"GLOBAL-PHO-10X12-PRO","url":"http://example.com/myLargeTestPhoto.jpg","copies":1}]'
@@ -105,10 +105,10 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Mon, 26 Aug 2019 12:48:46 GMT
+      - Tue, 27 Aug 2019 12:30:23 GMT
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"items":[{"id":1001876,"sku":"GLOBAL-PHO-4X6-PRO","url":"http://example.com/myTestPhoto.jpg","status":"NotYetDownloaded","copies":1,"sizing":"Crop","priceToUser":null,"price":0,"md5Hash":null,"previewUrl":null,"thumbnailUrl":null,"attributes":null,"errorMessage":null},{"id":1001877,"sku":"GLOBAL-PHO-10X12-PRO","url":"http://example.com/myLargeTestPhoto.jpg","status":"NotYetDownloaded","copies":1,"sizing":"Crop","priceToUser":null,"price":0,"md5Hash":null,"previewUrl":null,"thumbnailUrl":null,"attributes":null,"errorMessage":null}]},"statusTxt":"OK","statusCode":200}'
+      string: '{"data":{"items":[{"id":1002062,"sku":"GLOBAL-PHO-4X6-PRO","url":"http://example.com/myTestPhoto.jpg","status":"NotYetDownloaded","copies":1,"sizing":"Crop","priceToUser":null,"price":0,"md5Hash":null,"previewUrl":null,"thumbnailUrl":null,"attributes":null,"errorMessage":null},{"id":1002063,"sku":"GLOBAL-PHO-10X12-PRO","url":"http://example.com/myLargeTestPhoto.jpg","status":"NotYetDownloaded","copies":1,"sizing":"Crop","priceToUser":null,"price":0,"md5Hash":null,"previewUrl":null,"thumbnailUrl":null,"attributes":null,"errorMessage":null}]},"statusTxt":"OK","statusCode":200}'
     http_version: 
-  recorded_at: Mon, 26 Aug 2019 12:48:46 GMT
+  recorded_at: Tue, 27 Aug 2019 12:30:24 GMT
 recorded_with: VCR 5.0.0

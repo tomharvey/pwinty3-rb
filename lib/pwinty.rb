@@ -1,26 +1,26 @@
 require 'faraday'
 require 'faraday_middleware'
 
-require "pwinty3/base"
-require "pwinty3/country"
-require "pwinty3/http_errors"
-require "pwinty3/image"
-require "pwinty3/order"
-require "pwinty3/order_status"
-require 'pwinty3/photo_status'
-require "pwinty3/shipment"
-require "pwinty3/shipping_info"
-require "pwinty3/version"
+require "pwinty/base"
+require "pwinty/country"
+require "pwinty/http_errors"
+require "pwinty/image"
+require "pwinty/order"
+require "pwinty/order_status"
+require 'pwinty/photo_status'
+require "pwinty/shipment"
+require "pwinty/shipping_info"
+require "pwinty/version"
 
-module Pwinty3
+module Pwinty
     class Error < StandardError; end
-    class AuthenticationError < Pwinty3::Error; end
-    class OrderNotFound < Pwinty3::Error; end
-    class StateIsInvalid < Pwinty3::Error; end
+    class AuthenticationError < Pwinty::Error; end
+    class OrderNotFound < Pwinty::Error; end
+    class StateIsInvalid < Pwinty::Error; end
 
-    MERCHANT_ID = ENV['PWINTY3_MERCHANT_ID']
-    API_KEY     = ENV['PWINTY3_API_KEY']
-    BASE_URL    = ENV['PWINTY3_BASE_URL'] || 'https://sandbox.pwinty.com'
+    MERCHANT_ID = ENV['PWINTY_MERCHANT_ID']
+    API_KEY     = ENV['PWINTY_API_KEY']
+    BASE_URL    = ENV['PWINTY_BASE_URL'] || 'https://sandbox.pwinty.com'
     API_VERSION = 'v3.0'
 
     class << self
@@ -33,13 +33,13 @@ module Pwinty3
     end
 
     def self.url
-        "#{Pwinty3::BASE_URL}/#{Pwinty3::API_VERSION}/"
+        "#{Pwinty::BASE_URL}/#{Pwinty::API_VERSION}/"
     end
 
     def self.headers
         {
-            'X-Pwinty-MerchantId' => Pwinty3::MERCHANT_ID,
-            'X-Pwinty-REST-API-Key' => Pwinty3::API_KEY,
+            'X-Pwinty-MerchantId' => Pwinty::MERCHANT_ID,
+            'X-Pwinty-REST-API-Key' => Pwinty::API_KEY,
         }
     end
 
@@ -47,7 +47,7 @@ module Pwinty3
         Faraday.new(url: url, headers: headers) do |config|
             config.request :json
             config.response :json
-            config.use Pwinty3::HttpErrors
+            config.use Pwinty::HttpErrors
             config.adapter Faraday.default_adapter
         end
     end

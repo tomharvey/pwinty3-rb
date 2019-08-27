@@ -1,16 +1,16 @@
-require 'pwinty3/photo_status'
+require 'pwinty/photo_status'
 
-module Pwinty3
+module Pwinty
 
-	class OrderStatus < Pwinty3::Base
+	class OrderStatus < Pwinty::Base
 		attribute :id, Types::Coercible::Integer
 		attribute :isValid, Types::Bool
 		attribute :generalErrors, Types::Array.of(Types::String)
-		attribute :photos, Types::Array.of(Pwinty3::PhotoStatus)
+		attribute :photos, Types::Array.of(Pwinty::PhotoStatus)
 		
 
 		def self.check(id)
-	      	response = Pwinty3.conn.get("orders/#{id}/SubmissionStatus")
+	      	response = Pwinty.conn.get("orders/#{id}/SubmissionStatus")
 	      	new(response.body['data'])
 	    end
 	end

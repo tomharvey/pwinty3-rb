@@ -1,16 +1,16 @@
-RSpec.describe Pwinty3::Order do
+RSpec.describe Pwinty::Order do
 	it "has an Order class" do
-		expect(Pwinty3::Order).to be_truthy
+		expect(Pwinty::Order).to be_truthy
 	end
 
   	it "can create an order" do
   		VCR.use_cassette('order/create') do
-		  	order = Pwinty3::Order.create(
+		  	order = Pwinty::Order.create(
 		  		recipientName: "FirstName LastName",
 				countryCode: "US",
 				preferredShippingMethod: "Budget"
 		  	)
-		  	expect(order).to be_kind_of(Pwinty3::Order)
+		  	expect(order).to be_kind_of(Pwinty::Order)
 		  	expect(order.id).to be_truthy
 
 		  	expect(order.recipientName).to eq('FirstName LastName')
@@ -21,9 +21,9 @@ RSpec.describe Pwinty3::Order do
 
 	it "can get an order" do
 	  	VCR.use_cassette('order/get') do
-			order = Pwinty3::Order.find(794822)
+			order = Pwinty::Order.find(794822)
 
-	  	 	expect(order).to be_kind_of(Pwinty3::Order)
+	  	 	expect(order).to be_kind_of(Pwinty::Order)
 	  	 	expect(order.id).to eq(794822)
 	  	 	expect(order.recipientName).to eq('FirstName LastName')
 		  	expect(order.countryCode).to eq('US')
@@ -33,7 +33,7 @@ RSpec.describe Pwinty3::Order do
 
 	it "can update an order" do
 		VCR.use_cassette('order/update') do
-			order = Pwinty3::Order.create(
+			order = Pwinty::Order.create(
 		  		recipientName: "FirstName LastName",
 				countryCode: "US",
 				preferredShippingMethod: "Budget"
@@ -54,9 +54,9 @@ RSpec.describe Pwinty3::Order do
 
 	it "can list orders" do
 		VCR.use_cassette('order/list') do
-			orders = Pwinty3::Order.list
+			orders = Pwinty::Order.list
 
-			expect(orders[0]).to be_kind_of(Pwinty3::Order)
+			expect(orders[0]).to be_kind_of(Pwinty::Order)
 			# This should be equal to Order.count but there is a problem with the API's pagination
 			expect(orders.count).to eq(100)
 		end
@@ -64,20 +64,20 @@ RSpec.describe Pwinty3::Order do
 
 	it "can count orders" do
 		VCR.use_cassette('order/count') do
-			count = Pwinty3::Order.count
+			count = Pwinty::Order.count
 			expect(count).to be > 467
 		end
 	end
 
   	it "can validate an order" do
   		VCR.use_cassette('order/get') do
-	  		@order = Pwinty3::Order.find(794822)
+	  		@order = Pwinty::Order.find(794822)
 	  	end
 
 	  	VCR.use_cassette('order/status') do
 	  		status = @order.submission_status
 
-	  		expect(status).to be_kind_of(Pwinty3::OrderStatus)
+	  		expect(status).to be_kind_of(Pwinty::OrderStatus)
 	  		expect(status.id).to eq(@order.id)
 	  		expect(status.id).to eq(794822)
 	  		expect(status.isValid).to be(false)
@@ -87,7 +87,7 @@ RSpec.describe Pwinty3::Order do
 
   	it "can add an image to an order" do
   		VCR.use_cassette('order/create') do
-	  		@order = Pwinty3::Order.create(
+	  		@order = Pwinty::Order.create(
 		  		recipientName: "FirstName LastName",
 				countryCode: "US",
 				preferredShippingMethod: "Budget"
@@ -109,7 +109,7 @@ RSpec.describe Pwinty3::Order do
 
   	it "can add an image to an order" do
   		VCR.use_cassette('order/add_multi_images') do
-	  		order = Pwinty3::Order.create(
+	  		order = Pwinty::Order.create(
 		  		recipientName: "FirstName LastName",
 				countryCode: "US",
 				preferredShippingMethod: "Budget"
@@ -139,7 +139,7 @@ RSpec.describe Pwinty3::Order do
 
   	it "can build and submit a valid order" do
   		VCR.use_cassette('order/end_to_end') do
-  			order = Pwinty3::Order.create(
+  			order = Pwinty::Order.create(
   				recipientName: "Tom Harvey",
   				address1: "My House",
   				addressTownOrCity: "Glasgow",
@@ -163,7 +163,7 @@ RSpec.describe Pwinty3::Order do
 
   	it "can get the shipment info from a submitted order" do
   		VCR.use_cassette('order/submitted_shipment') do
-  			order = Pwinty3::Order.find(795042)
+  			order = Pwinty::Order.find(795042)
 
   			expect(order.shippingInfo.price).to eq 500
   			expect(order.shippingInfo.shipments[0].trackingNumber).to eq 'XYZ123456ABC'
@@ -172,7 +172,7 @@ RSpec.describe Pwinty3::Order do
 
   	it "cannot hold or cancel a submitted order" do
   		VCR.use_cassette('order/hold_cancel_fail') do
-  			order = Pwinty3::Order.find(795042)
+  			order = Pwinty::Order.find(795042)
 
   			cancelled = order.cancel
   			expect(cancelled).to be false
@@ -184,7 +184,7 @@ RSpec.describe Pwinty3::Order do
 
   	it "can cancel an unsubmitted order" do
   		VCR.use_cassette('order/cancel_success') do
-  			order = Pwinty3::Order.find(795041)
+  			order = Pwinty::Order.find(795145)
 
   			cancelled = order.cancel
   			expect(cancelled).to be true

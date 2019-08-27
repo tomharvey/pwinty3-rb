@@ -1,4 +1,4 @@
-# Pwinty3
+# Pwinty
 
 [![Build Status](https://travis-ci.org/tomharvey/pwinty3-rb.svg?branch=master)](https://travis-ci.org/tomharvey/pwinty3-rb)
 [![Gem Version](https://badge.fury.io/rb/pwinty3.svg)](https://badge.fury.io/rb/pwinty3)
@@ -18,7 +18,7 @@ core service.
 Add this line to your application's Gemfile:
 
 ``` ruby
-gem 'pwinty3'
+gem 'pwinty'
 ```
 
 And then execute:
@@ -27,9 +27,9 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install pwinty3
+    $ gem install pwinty
 
- And include in your app with `require "pwinty3"`
+ And include in your app with `require "pwinty"`
 
 ## Configuration
 You can use environment variables or you can declare the configuration in your
@@ -40,12 +40,12 @@ To authenticate requests you must get your merchant ID and API Key from the
 [Integration Settings in the Pwinty Dashboard](https://beta-dashboard.pwinty.com/settings/integrations).
 
 These values must be set as the Environment Variables
-`PWINTY3_MERCHANT_ID` and `PWINTY3_API_KEY`
+`PWINTY_MERCHANT_ID` and `PWINTY_API_KEY`
 or declared in your app using:
 
 ``` ruby
-Pwinty3::MERCHANT_ID = 'your merchant id'
-Pwinty3::API_KEY = 'your api key'
+Pwinty::MERCHANT_ID = 'your merchant id'
+Pwinty::API_KEY = 'your api key'
 ```
 
 #### Production vs Sandbox
@@ -54,11 +54,11 @@ The Pwinty API provides a sandbox endpoint to test and develop against at
 endpoint used by this library.
 
 When you are ready to switch to the production endpoint, set the
-Environment Variable `PWINTY3_BASE_URL` or declare the
+Environment Variable `PWINTY_BASE_URL` or declare the
 constant in your app:
 
 ``` ruby
-Pwinty3::BASE_URL = 'https://api.pwinty.com'  # Without a trailing slash
+Pwinty::BASE_URL = 'https://api.pwinty.com'  # Without a trailing slash
 ```
 
 ## Usage
@@ -68,19 +68,19 @@ Pwinty3::BASE_URL = 'https://api.pwinty.com'  # Without a trailing slash
 These are the minimum variables you need to send to the API to register your
 order, you'll want to add more or update later.
 
-See the `lib/pwinty3/order.rb` file or the
+See the `lib/pwinty/order.rb` file or the
 [API documentation](https://pwinty.com/api/#orders-create)
 to understand the full list of attributes to send.
 
 ``` ruby
-order = Pwinty3::Order.create(
+order = Pwinty::Order.create(
     recipientName: "FirstName LastName",
     countryCode: "US",
     preferredShippingMethod: "Budget"
 )
 ```
 
-This create method will return a `Pwinty3::Order` object.
+This create method will return a `Pwinty::Order` object.
 
 ### Get an existing Order from the API
 
@@ -88,10 +88,10 @@ Once an order is created you can retreive it from the API to further manage it,
 or if it has been submitted you can see the latest production and shipping details.
 
 ``` ruby
-order = Pwinty3::Order.find(1)  # Pass the ID returned when you created the Order
+order = Pwinty::Order.find(1)  # Pass the ID returned when you created the Order
 ```
 
-This method will return a `Pwinty3::Order` object.
+This method will return a `Pwinty::Order` object.
 
 ### Update an Order
 
@@ -103,7 +103,7 @@ order.update(
 )
 ```
 
-This update method will update the `Pwinty3::Order` object.
+This update method will update the `Pwinty::Order` object.
 
 ### Validate an Order
 
@@ -113,7 +113,7 @@ Before submitting you might want to validate the order and check all is well.
 status = order.submission_status
 ```
 
-This will return a `Pwinty3::OrderStatus` object. See the
+This will return a `Pwinty::OrderStatus` object. See the
 [API documentation](https://pwinty.com/api/#orders-validate)
 for more details of the shape of this reponse. But, you'll at least want the
 `status.isValid` method for a boolean
@@ -147,7 +147,7 @@ order.add_images([
 ])
 ```
 
-On completion there will be a list of `Pwinty3::Image` objects associated with `order.images`
+On completion there will be a list of `Pwinty::Image` objects associated with `order.images`
 
 
 ### Submit, Cancel or Hold an order
@@ -172,31 +172,31 @@ processing. Each will return a boolean.
 
 Once created you can use the `find` method to get the most up to date info about an Order.
 Following submission, this will contain a shippingInfo with a price for shipping and 
-a list of `Pwinty3::Shipment` objects
+a list of `Pwinty::Shipment` objects
 
 ``` ruby
-order = Pwinty3::Order.find(1)
+order = Pwinty::Order.find(1)
 order.shippingInfo.price
 >>> 500
 
 order.shippingInfo.shipments[0]
->>> #<Pwinty3::Shipment shipmentId="1" isTracked=true trackingNumber="XYZ123456ABC" ...
+>>> #<Pwinty::Shipment shipmentId="1" isTracked=true trackingNumber="XYZ123456ABC" ...
 ```
 
 ### List your orders
 
 ``` ruby
-orders = Pwinty3::Order.list
+orders = Pwinty::Order.list
 ```
 **N.B - There appears to be an issue with the pagination of the list results from the API.
 So you can only get the latest 100 results at this moment.** 
 
-Will return an array of `Pwinty3::Order` objects.
+Will return an array of `Pwinty::Order` objects.
 
 ### Count your orders
 
 ``` ruby
-count = Pwinty3::Order.count
+count = Pwinty::Order.count
 ```
 Will return an integer of the number of orders you have.
 
@@ -231,6 +231,6 @@ The gem is available as open source under the terms of the
 
 ## Code of Conduct
 
-Everyone interacting in the Pwinty3 project’s codebases, issue trackers, chat
+Everyone interacting in the Pwinty project’s codebases, issue trackers, chat
 rooms and mailing lists is expected to follow the
 [code of conduct](https://github.com/tomharvey/pwinty3-rb/blob/master/CODE_OF_CONDUCT.md).
