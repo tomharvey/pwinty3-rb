@@ -36,12 +36,20 @@ module Pwinty
         attribute :invoiceCurrency, Types::String.optional
         attribute :tag, Types::String.optional
 
-        def self.list
-            response = Pwinty.conn.get("orders?count=250&offset=0")
-            r_data = response.body['data']
-            # TODO There is some bug with offset in the API.
-            # total_count = r_data['count']
-            Pwinty.collate_results(r_data['content'], self)
+        def self.list(page_size=50)
+            all_orders = list_each_page(page_size)
+            Pwinty.collate_results(all_orders, self)
+        end
+
+        def self.list_each_page(page_size, page_start=0, total_orders_count=nil)
+            all_orders = []
+            while total_orders_count.nil? or all_orders.count < total_orders_count
+                response = Pwinty.conn.get("orders?limit=#{page_size}&start=#{page_start}")
+                total_orders_count ||= response.body['data']['count']
+                all_orders = all_orders + response.body['data']['content']
+                page_start = page_start + page_size
+            end
+            all_orders
         end
 
 

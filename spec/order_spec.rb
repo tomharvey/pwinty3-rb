@@ -57,8 +57,7 @@ RSpec.describe Pwinty::Order do
 			orders = Pwinty::Order.list
 
 			expect(orders[0]).to be_kind_of(Pwinty::Order)
-			# This should be equal to Order.count but there is a problem with the API's pagination
-			expect(orders.count).to eq(100)
+			expect(orders.count).to eq(Pwinty::Order.count)
 		end
 	end
 
