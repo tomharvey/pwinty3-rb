@@ -52,10 +52,10 @@ module Pwinty
         end
     end
 
-    def self.collate_results(response_data, classType)
+    def self.collate_results(response_data, targetted_class)
         collection = []
         response_data.each do |individual_attr|
-            collection << classType.new(individual_attr)
+            collection << targetted_class.new(individual_attr)
         end
         collection
     end
