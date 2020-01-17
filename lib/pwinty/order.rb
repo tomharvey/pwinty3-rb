@@ -101,6 +101,7 @@ module Pwinty
         def add_images images
             response = Pwinty.conn.post("orders/#{self.id}/images/batch", images)
             images = Pwinty.collate_results(response.body['data']['items'], Pwinty::Image)
+            p images
             self.images = self.images + images
         end
 
