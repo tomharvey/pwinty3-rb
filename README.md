@@ -188,8 +188,7 @@ order.shippingInfo.shipments[0]
 ``` ruby
 orders = Pwinty::Order.list
 ```
-**N.B - There appears to be an issue with the pagination of the list results from the API.
-So you can only get the latest 100 results at this moment.** 
+**N.B - This will get all of your orders - this can take some time. By default, it will request the orders from Pwinty in batches of 50; so 500 orders will take 10 requests to complete. You can change this batch size by passing an integer to this list method** 
 
 Will return an array of `Pwinty::Order` objects.
 
