@@ -188,7 +188,7 @@ order.shippingInfo.shipments[0]
 ``` ruby
 orders = Pwinty::Order.list
 ```
-**N.B - This will get all of your orders - this can take some time. By default, it will request the orders from Pwinty in batches of 50; so 500 orders will take 10 requests to complete. You can change this batch size by passing an integer to this list method** 
+**N.B - This will get all of your orders - this can take some time. By default, it will request the orders from Pwinty in batches of 50; so 500 orders will take 10 requests to complete.** 
 
 Will return an array of `Pwinty::Order` objects.
 
@@ -203,13 +203,20 @@ Will return an integer of the number of orders you have.
 
 ## Development
 
-After checking out the repo, run `bundle` to install dependencies. Then, run
-`rake` to run the tests. You can also run `bin/console` for an interactive
+After checking out the repo, run `bundle` to install dependencies.
+
+Then, run `rake` to run the tests.
+
+You can also run `bin/console` for an interactive
 prompt that will allow you to experiment.
 
-The tests use VCRs to mock the responses from Pwinty's API.
+The tests use VCRs to mock the responses from Pwinty's API. See the
+spec/vcrs directory for some example responses from the Pwinty API
+which are used in the existing tests.
 
 To install this gem onto your local machine, run `bundle exec rake install`.
+
+#### For project owners only:
 To release a new version, update the version number in `version.rb`, and then
 run `bundle exec rake release`, which will create a git tag for the version,
 push git commits and tags, and push the `.gem` file to
