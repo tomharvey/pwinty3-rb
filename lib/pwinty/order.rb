@@ -17,7 +17,7 @@ module Pwinty
         attribute :stateOrCounty, Types::String.optional
         attribute :status, Types::String
         attribute :payment, Types::String
-        attribute :packingSlipUrl, Types::String.optional
+        attribute? :packingSlipUrl, Types::String.optional
         attribute :paymentUrl, Types::String.optional
         attribute :price, Types::Integer
         attribute :shippingInfo, Pwinty::ShippingInfo
