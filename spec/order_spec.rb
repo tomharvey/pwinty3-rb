@@ -136,6 +136,27 @@ RSpec.describe Pwinty::Order do
 		 end
   	end
 
+    it "can attempt to add an image to an order that will result in a pwinty api error" do
+      VCR.use_cassette('order/add_multi_images_which_will_api_error') do
+        order = Pwinty::Order.create(
+          recipientName: "FirstName LastName",
+          countryCode: "US",
+          preferredShippingMethod: "Budget"
+        )
+        expect(order.images.count).to eq 0
+
+        order.add_images(
+          [{
+            sku: "GLOBAL-PHO-4X6-PRO",
+            url: "myTestPhoto.jpg",
+            copies: 1,
+          }]
+        )
+
+        expect(order.images.count).to eq 0
+     end
+    end
+
   	it "can build and submit a valid order" do
   		VCR.use_cassette('order/end_to_end') do
   			order = Pwinty::Order.create(

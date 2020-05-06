@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.pwinty.com/v3.0/orders
+    body:
+      encoding: UTF-8
+      string: '{"recipientName":"FirstName LastName","countryCode":"US","preferredShippingMethod":"Budget"}'
+    headers:
+      X-Pwinty-Merchantid:
+      - "<MERCHANT_ID>"
+      X-Pwinty-Rest-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      Request-Context:
+      - appId=cid-v1:92ed31ef-d5f4-4c95-8d9e-7ffc10f901a6
+      Access-Control-Expose-Headers:
+      - Request-Context
+      X-Powered-By:
+      - ASP.NET
+      Arr-Disable-Session-Affinity:
+      - 'True'
+      Date:
+      - Wed, 06 May 2020 10:22:23 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"id":867733,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
+        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2020-05-06T10:22:23.2249017Z","lastUpdated":"2020-05-06T10:22:23.2249017Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"packingSlipUrl":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
+    http_version: 
+  recorded_at: Wed, 06 May 2020 10:22:23 GMT
+- request:
+    method: post
+    uri: https://sandbox.pwinty.com/v3.0/orders/867733/images/batch
+    body:
+      encoding: UTF-8
+      string: '[{"sku":"GLOBAL-PHO-4X6-PRO","url":"myTestPhoto.jpg","copies":1}]'
+    headers:
+      X-Pwinty-Merchantid:
+      - "<MERCHANT_ID>"
+      X-Pwinty-Rest-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '106'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/10.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      Request-Context:
+      - appId=cid-v1:92ed31ef-d5f4-4c95-8d9e-7ffc10f901a6
+      Access-Control-Expose-Headers:
+      - Request-Context
+      X-Powered-By:
+      - ASP.NET
+      Arr-Disable-Session-Affinity:
+      - 'True'
+      Date:
+      - Wed, 06 May 2020 10:22:24 GMT
+    body:
+      encoding: UTF-8
+      string: '{"data":null,"statusTxt":"Url myTestPhoto.jpg is not a valid http or
+        https absolute url","statusCode":400}'
+    http_version: 
+  recorded_at: Wed, 06 May 2020 10:22:24 GMT
+recorded_with: VCR 5.0.0
