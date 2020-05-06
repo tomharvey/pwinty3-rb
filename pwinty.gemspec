@@ -34,6 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "vcr", "~> 5.0"
   spec.add_development_dependency "webmock", "~> 3.6"
   spec.add_development_dependency "simplecov", "~> 0.17"
+  spec.add_development_dependency "dotenv", "~> 2.7.5"
 
   spec.add_dependency "dry-struct", "~> 1.0"
   spec.add_dependency "dry-struct-setters", "~> 0.2"

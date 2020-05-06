@@ -2,6 +2,7 @@ require 'simplecov'
 SimpleCov.start
 
 require "bundler/setup"
+require "dotenv/load"
 require "pwinty"
 require "vcr"
 

@@ -216,6 +216,8 @@ which are used in the existing tests.
 
 To install this gem onto your local machine, run `bundle exec rake install`.
 
+You can create a `.env` file based on the provided `.env.sample` to hold your Pwinty sandbox credentials.
+
 #### For project owners only:
 To release a new version, update the version number in `version.rb`, and then
 run `bundle exec rake release`, which will create a git tag for the version,
