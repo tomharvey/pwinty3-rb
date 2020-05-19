@@ -5,7 +5,7 @@ module Pwinty
 			case env[:status]
 			when 401; raise Pwinty::AuthenticationError, msg
 			when 403; raise Pwinty::StateIsInvalid, msg
-			when 404; raise Pwinty::OrderNotFound, msg
+			when 404; raise Pwinty::NotFound, msg
 			when 500; raise Pwinty::Error, msg
 			end
 		end
