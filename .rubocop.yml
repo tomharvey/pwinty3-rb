@@ -1,0 +1,6 @@
+AllCops:
+  DisabledByDefault: true
+Layout/IndentationStyle:
+  Enabled: true
+Layout/IndentationWidth:
+  Enabled: true
