@@ -11,7 +11,7 @@ module Pwinty
 
     def self.check(id)
       response = Pwinty.conn.get("orders/#{id}/SubmissionStatus")
-          new(response.body['data'])
+      new(response.body['data'])
       end
   end
 end

@@ -39,46 +39,46 @@ module Pwinty
 
     def self.list(page_size=50)
       all_orders = list_each_page(page_size)
-        Pwinty.collate_results(all_orders, self)
+      Pwinty.collate_results(all_orders, self)
     end
 
     def self.list_each_page(page_size, page_start=0, total_orders_count=nil)
       all_orders = []
-        while total_orders_count.nil? or all_orders.count < total_orders_count
-          response = Pwinty.conn.get("orders?limit=#{page_size}&start=#{page_start}")
-            total_orders_count ||= response.body['data']['count']
-            all_orders = all_orders + response.body['data']['content']
-            page_start = page_start + page_size
-        end
-        all_orders
+      while total_orders_count.nil? or all_orders.count < total_orders_count
+        response = Pwinty.conn.get("orders?limit=#{page_size}&start=#{page_start}")
+        total_orders_count ||= response.body['data']['count']
+        all_orders = all_orders + response.body['data']['content']
+        page_start = page_start + page_size
+      end
+      all_orders
     end
 
 
     def self.count
       response = Pwinty.conn.get("orders?count=1&offset=0")
-        response.body['data']['count']
+      response.body['data']['count']
     end
 
 
     def self.create(**args)
       response = Pwinty.conn.post("orders", args)
-        new(response.body['data'])
+      new(response.body['data'])
     end
 
     def self.find(id)
       response = Pwinty.conn.get("orders/#{id}")
-        new(response.body['data'])
+      new(response.body['data'])
     end
 
     def update(**args)
       update_body = self.to_hash.merge(args)
-        response = Pwinty.conn.put("orders/#{self.id}/", update_body)
-        self.assign_attributes(response.body['data'])
+      response = Pwinty.conn.put("orders/#{self.id}/", update_body)
+      self.assign_attributes(response.body['data'])
     end
 
     def submission_status
       response = Pwinty.conn.get("orders/#{id}/SubmissionStatus")
-        Pwinty::OrderStatus.new(response.body['data'])
+      Pwinty::OrderStatus.new(response.body['data'])
     end
 
     def submit
@@ -95,31 +95,31 @@ module Pwinty
 
     def add_image image
       images = add_images([image])
-        self.images
+      self.images
     end
 
     def add_images images
       response = Pwinty.conn.post("orders/#{self.id}/images/batch", images)
-        success = response.status == 200
-        unless success
-          Pwinty.logger.warn response.body['statusTxt']
-        end
-        if response.body['data'] && response.body['data']['items']
-          images = Pwinty.collate_results(response.body['data']['items'], Pwinty::Image)
-            self.images = self.images + images
-        end
-        self.images
+      success = response.status == 200
+      unless success
+        Pwinty.logger.warn response.body['statusTxt']
+      end
+      if response.body['data'] && response.body['data']['items']
+        images = Pwinty.collate_results(response.body['data']['items'], Pwinty::Image)
+        self.images = self.images + images
+      end
+      self.images
     end
 
       protected
 
     def update_status status
       response = Pwinty.conn.post("orders/#{self.id}/status", {status: status})
-        success = response.status == 200
-        unless success
-          Pwinty.logger.warn response.body['statusTxt']
-        end
-        success
+      success = response.status == 200
+      unless success
+        Pwinty.logger.warn response.body['statusTxt']
+      end
+      success
     end
 
   end

@@ -4,3 +4,5 @@ Layout/IndentationStyle:
   Enabled: true
 Layout/IndentationWidth:
   Enabled: true
+Layout/IndentationConsistency:
+  Enabled: true

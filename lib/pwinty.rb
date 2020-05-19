@@ -38,25 +38,25 @@ module Pwinty
 
   def self.headers
     {
-        'X-Pwinty-MerchantId' => Pwinty::MERCHANT_ID,
-        'X-Pwinty-REST-API-Key' => Pwinty::API_KEY,
+      'X-Pwinty-MerchantId' => Pwinty::MERCHANT_ID,
+      'X-Pwinty-REST-API-Key' => Pwinty::API_KEY,
     }
   end
 
   def self.conn
     Faraday.new(url: url, headers: headers) do |config|
       config.request :json
-        config.response :json
-        config.use Pwinty::HttpErrors
-        config.adapter Faraday.default_adapter
+      config.response :json
+      config.use Pwinty::HttpErrors
+      config.adapter Faraday.default_adapter
     end
   end
 
   def self.collate_results(response_data, targetted_class)
     collection = []
-      response_data.each do |individual_attr|
-        collection << targetted_class.new(individual_attr)
-      end
-      collection
+    response_data.each do |individual_attr|
+      collection << targetted_class.new(individual_attr)
+    end
+    collection
   end
 end
