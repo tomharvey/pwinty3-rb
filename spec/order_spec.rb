@@ -4,19 +4,19 @@ RSpec.describe Pwinty::Order do
   end
 
   it "can create an order" do
-   VCR.use_cassette('order/create') do
-    order = Pwinty::Order.create(
-      recipientName: "FirstName LastName",
-    countryCode: "US",
-    preferredShippingMethod: "Budget"
-    )
-    expect(order).to be_kind_of(Pwinty::Order)
-    expect(order.id).to be_truthy
+    VCR.use_cassette('order/create') do
+      order = Pwinty::Order.create(
+        recipientName: "FirstName LastName",
+        countryCode: "US",
+        preferredShippingMethod: "Budget"
+      )
+      expect(order).to be_kind_of(Pwinty::Order)
+      expect(order.id).to be_truthy
 
-    expect(order.recipientName).to eq('FirstName LastName')
-    expect(order.countryCode).to eq('US')
-    expect(order.preferredShippingMethod).to eq('Budget')
-  end
+      expect(order.recipientName).to eq('FirstName LastName')
+      expect(order.countryCode).to eq('US')
+      expect(order.preferredShippingMethod).to eq('Budget')
+    end
  end
 
   it "can get an order" do
@@ -34,10 +34,10 @@ RSpec.describe Pwinty::Order do
   it "can update an order" do
     VCR.use_cassette('order/update') do
       order = Pwinty::Order.create(
-          recipientName: "FirstName LastName",
+        recipientName: "FirstName LastName",
         countryCode: "US",
         preferredShippingMethod: "Budget"
-        )
+      )
 
       order.update(
         address1: 'House number',
@@ -88,8 +88,8 @@ RSpec.describe Pwinty::Order do
     VCR.use_cassette('order/create') do
       @order = Pwinty::Order.create(
         recipientName: "FirstName LastName",
-      countryCode: "US",
-      preferredShippingMethod: "Budget"
+        countryCode: "US",
+        preferredShippingMethod: "Budget"
       )
     end
 
@@ -108,53 +108,52 @@ RSpec.describe Pwinty::Order do
 
   it "can add an image to an order" do
     VCR.use_cassette('order/add_multi_images') do
-     order = Pwinty::Order.create(
-       recipientName: "FirstName LastName",
-     countryCode: "US",
-     preferredShippingMethod: "Budget"
-     )
-     expect(order.images.count).to eq 0
+      order = Pwinty::Order.create(
+        recipientName: "FirstName LastName",
+        countryCode: "US",
+        preferredShippingMethod: "Budget"
+      )
+      expect(order.images.count).to eq 0
     
-     order.add_images(
-       [{
-         sku: "GLOBAL-PHO-4X6-PRO",
-         url: "http://example.com/myTestPhoto.jpg",
-         copies: 1,
-       }, {
-         sku: "GLOBAL-PHO-10X12-PRO",
-         url: "http://example.com/myLargeTestPhoto.jpg",
-         copies: 1,
-       }]
-     )
+      order.add_images(
+        [{
+          sku: "GLOBAL-PHO-4X6-PRO",
+          url: "http://example.com/myTestPhoto.jpg",
+          copies: 1,
+        }, {
+          sku: "GLOBAL-PHO-10X12-PRO",
+          url: "http://example.com/myLargeTestPhoto.jpg",
+          copies: 1,
+        }]
+      )
 
-     expect(order.images.count).to eq 2
+      expect(order.images.count).to eq 2
 
-     order.images.each do |order_image|
-       expect(order_image.status).to eq "NotYetDownloaded"
-       expect(order_image.copies).to eq 1
-     end
-   end
+      order.images.each do |order_image|
+        expect(order_image.status).to eq "NotYetDownloaded"
+        expect(order_image.copies).to eq 1
+      end
+    end
   end
 
   it "can attempt to add an image to an order that will result in a pwinty api error" do
     VCR.use_cassette('order/add_multi_images_which_will_api_error') do
-     order = Pwinty::Order.create(
-       recipientName: "FirstName LastName",
-       countryCode: "US",
-       preferredShippingMethod: "Budget"
-     )
-     expect(order.images.count).to eq 0
+      order = Pwinty::Order.create(
+        recipientName: "FirstName LastName",
+        countryCode: "US",
+        preferredShippingMethod: "Budget"
+      )
+      expect(order.images.count).to eq 0
 
-     order.add_images(
-       [{
-         sku: "GLOBAL-PHO-4X6-PRO",
-         url: "myTestPhoto.jpg",
-         copies: 1,
-       }]
-     )
-
-     expect(order.images.count).to eq 0
-   end
+      order.add_images(
+        [{
+          sku: "GLOBAL-PHO-4X6-PRO",
+          url: "myTestPhoto.jpg",
+          copies: 1,
+        }]
+      )
+      expect(order.images.count).to eq 0
+    end
   end
 
   it "can build and submit a valid order" do
@@ -167,12 +166,12 @@ RSpec.describe Pwinty::Order do
         postalOrZipCode: "G1 3XX",
         countryCode: "GB",
         preferredShippingMethod: "Budget",	
-    )
+      )
 
       order.add_image(
         sku: "GLOBAL-PHO-4X6-PRO",
-          url: "https://github.com/tomharvey/pwinty3-rb/raw/master/spec/TestImage.jpg",
-          copies: 1,
+        url: "https://github.com/tomharvey/pwinty3-rb/raw/master/spec/TestImage.jpg",
+        copies: 1,
       )
 
       submitted = order.submit
