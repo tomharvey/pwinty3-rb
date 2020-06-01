@@ -116,6 +116,7 @@ module Pwinty
     end
 
     def packingSlipUrl=(new_url)
+      # Work around for https://github.com/tomharvey/pwinty3-rb/issues/14
       @attributes[:packingSlipUrl] = new_url
     end
 
