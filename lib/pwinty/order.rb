@@ -111,7 +111,7 @@ module Pwinty
       self.images
     end
 
-      protected
+    protected
 
     def update_status status
       response = Pwinty.conn.post("orders/#{self.id}/status", {status: status})
