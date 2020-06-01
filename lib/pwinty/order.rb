@@ -73,7 +73,7 @@ module Pwinty
     def update(**args)
       update_body = self.to_hash.merge(args)
       response = Pwinty.conn.put("orders/#{self.id}/", update_body)
-      self.assign_attributes(response.body['data'])
+      update_instance_attributes(response.body['data'])
     end
 
     def submission_status
@@ -109,6 +109,10 @@ module Pwinty
         self.images = self.images + images
       end
       self.images
+    end
+
+    def update_instance_attributes(attrs)
+      self.assign_attributes(attrs)
     end
 
     protected
