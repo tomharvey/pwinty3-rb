@@ -115,6 +115,10 @@ module Pwinty
       self.assign_attributes(attrs)
     end
 
+    def packingSlipUrl=(new_url)
+      @attributes[:packingSlipUrl] = new_url
+    end
+
     protected
 
     def update_status status
