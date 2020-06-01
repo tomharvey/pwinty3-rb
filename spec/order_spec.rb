@@ -10,6 +10,7 @@ RSpec.describe Pwinty::Order do
         countryCode: "US",
         preferredShippingMethod: "Budget"
       )
+
       expect(order).to be_kind_of(Pwinty::Order)
       expect(order.id).to be_truthy
 
@@ -49,6 +50,24 @@ RSpec.describe Pwinty::Order do
       expect(order.recipientName).to eq('FirstName LastName')
       expect(order.countryCode).to eq('US')
       expect(order.preferredShippingMethod).to eq('Budget')
+    end
+  end
+
+  it "can update the attributes in a model" do
+    VCR.use_cassette('order/get') do
+      order = Pwinty::Order.find(794822)
+
+      order.update_instance_attributes(addressTownOrCity: 'Valencia')
+      expect(order.addressTownOrCity).to eq('Valencia')
+    end
+  end
+
+  it "can update the omittable attributes in a model" do
+    VCR.use_cassette('order/get') do
+      order = Pwinty::Order.find(794822)
+
+      order.update_instance_attributes(packingSlipUrl: 'https://example.com/slip.jpg')
+      expect(order.packingSlipUrl).to eq('https://example.com/slip.jpg')
     end
   end
 
