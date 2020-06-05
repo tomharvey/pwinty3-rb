@@ -12,7 +12,7 @@ http_interactions:
       X-Pwinty-Rest-Api-Key:
       - "<API_KEY>"
       User-Agent:
-      - Faraday v0.15.4
+      - Faraday v0.17.3
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -49,16 +49,16 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Wed, 06 May 2020 10:22:23 GMT
+      - Fri, 05 Jun 2020 17:20:12 GMT
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":867733,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
-        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2020-05-06T10:22:23.2249017Z","lastUpdated":"2020-05-06T10:22:23.2249017Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"packingSlipUrl":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
-    http_version: 
-  recorded_at: Wed, 06 May 2020 10:22:23 GMT
+      string: '{"data":{"id":877675,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
+        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2020-06-05T17:20:13.1417709Z","lastUpdated":"2020-06-05T17:20:13.1417709Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"packingSlipUrl":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
+    http_version: null
+  recorded_at: Fri, 05 Jun 2020 17:20:13 GMT
 - request:
     method: post
-    uri: https://sandbox.pwinty.com/v3.0/orders/867733/images/batch
+    uri: https://sandbox.pwinty.com/v3.0/orders/877675/images/batch
     body:
       encoding: UTF-8
       string: '[{"sku":"GLOBAL-PHO-4X6-PRO","url":"myTestPhoto.jpg","copies":1}]'
@@ -68,7 +68,7 @@ http_interactions:
       X-Pwinty-Rest-Api-Key:
       - "<API_KEY>"
       User-Agent:
-      - Faraday v0.15.4
+      - Faraday v0.17.3
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -103,11 +103,11 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Wed, 06 May 2020 10:22:24 GMT
+      - Fri, 05 Jun 2020 17:20:12 GMT
     body:
       encoding: UTF-8
       string: '{"data":null,"statusTxt":"Url myTestPhoto.jpg is not a valid http or
         https absolute url","statusCode":400}'
-    http_version: 
-  recorded_at: Wed, 06 May 2020 10:22:24 GMT
-recorded_with: VCR 5.0.0
+    http_version: null
+  recorded_at: Fri, 05 Jun 2020 17:20:13 GMT
+recorded_with: VCR 5.1.0

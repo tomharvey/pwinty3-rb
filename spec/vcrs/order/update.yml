@@ -12,7 +12,7 @@ http_interactions:
       X-Pwinty-Rest-Api-Key:
       - "<API_KEY>"
       User-Agent:
-      - Faraday v0.15.4
+      - Faraday v0.17.3
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -41,7 +41,7 @@ http_interactions:
       X-Aspnet-Version:
       - 4.0.30319
       Request-Context:
-      - appId=cid-v1:25960660-1811-400b-b0de-0ab970b09869
+      - appId=cid-v1:92ed31ef-d5f4-4c95-8d9e-7ffc10f901a6
       Access-Control-Expose-Headers:
       - Request-Context
       X-Powered-By:
@@ -49,27 +49,27 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Tue, 27 Aug 2019 12:29:53 GMT
+      - Fri, 05 Jun 2020 17:19:44 GMT
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":795142,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
-        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-27T12:29:53.1959317Z","lastUpdated":"2019-08-27T12:29:53.1959317Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
-    http_version: 
-  recorded_at: Tue, 27 Aug 2019 12:29:53 GMT
+      string: '{"data":{"id":877670,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
+        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2020-06-05T17:19:44.8527996Z","lastUpdated":"2020-06-05T17:19:44.8527996Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"packingSlipUrl":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
+    http_version: null
+  recorded_at: Fri, 05 Jun 2020 17:19:45 GMT
 - request:
     method: put
-    uri: https://sandbox.pwinty.com/v3.0/orders/795142/
+    uri: https://sandbox.pwinty.com/v3.0/orders/877670/
     body:
       encoding: UTF-8
-      string: '{"id":795142,"address1":"House number","address2":"Street address","postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
-        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-27T12:29:53+00:00","lastUpdated":"2019-08-27T12:29:53+00:00","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"errorMessage":null,"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"tag":null}'
+      string: '{"id":877670,"address1":"House number","address2":"Street address","postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
+        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","packingSlipUrl":null,"paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2020-06-05T17:19:44+00:00","lastUpdated":"2020-06-05T17:19:44+00:00","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"errorMessage":null,"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"tag":null}'
     headers:
       X-Pwinty-Merchantid:
       - "<MERCHANT_ID>"
       X-Pwinty-Rest-Api-Key:
       - "<API_KEY>"
       User-Agent:
-      - Faraday v0.15.4
+      - Faraday v0.17.3
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -98,7 +98,7 @@ http_interactions:
       X-Aspnet-Version:
       - 4.0.30319
       Request-Context:
-      - appId=cid-v1:25960660-1811-400b-b0de-0ab970b09869
+      - appId=cid-v1:92ed31ef-d5f4-4c95-8d9e-7ffc10f901a6
       Access-Control-Expose-Headers:
       - Request-Context
       X-Powered-By:
@@ -106,11 +106,11 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Tue, 27 Aug 2019 12:29:53 GMT
+      - Fri, 05 Jun 2020 17:19:45 GMT
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":795142,"address1":"House number","address2":"Street address","postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
-        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2019-08-27T12:29:53.197","lastUpdated":"2019-08-27T12:29:54.397068Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
-    http_version: 
-  recorded_at: Tue, 27 Aug 2019 12:29:54 GMT
-recorded_with: VCR 5.0.0
+      string: '{"data":{"id":877670,"address1":"House number","address2":"Street address","postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
+        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2020-06-05T17:19:44.853","lastUpdated":"2020-06-05T17:19:45.3528168Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"packingSlipUrl":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
+    http_version: null
+  recorded_at: Fri, 05 Jun 2020 17:19:45 GMT
+recorded_with: VCR 5.1.0
