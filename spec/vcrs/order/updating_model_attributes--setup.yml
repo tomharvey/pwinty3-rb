@@ -49,11 +49,11 @@ http_interactions:
       Arr-Disable-Session-Affinity:
       - 'True'
       Date:
-      - Fri, 05 Jun 2020 17:19:42 GMT
+      - Fri, 05 Jun 2020 17:20:23 GMT
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":877668,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
-        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2020-06-05T17:19:42.3824468Z","lastUpdated":"2020-06-05T17:19:42.3824468Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"packingSlipUrl":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
+      string: '{"data":{"id":877680,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
+        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2020-06-05T17:20:24.6338203Z","lastUpdated":"2020-06-05T17:20:24.6338203Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"packingSlipUrl":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
     http_version: null
-  recorded_at: Fri, 05 Jun 2020 17:19:42 GMT
+  recorded_at: Fri, 05 Jun 2020 17:20:25 GMT
 recorded_with: VCR 5.1.0
