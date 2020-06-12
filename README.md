@@ -18,7 +18,7 @@ core service.
 Add this line to your application's Gemfile:
 
 ``` ruby
-gem 'pwinty'
+gem 'pwinty', '~>3'
 ```
 
 And then execute:
