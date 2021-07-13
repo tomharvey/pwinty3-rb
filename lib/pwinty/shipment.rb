@@ -7,8 +7,8 @@ module Pwinty
     attribute :trackingUrl, Types::String.optional
     attribute :carrier, Types::String.optional
     attribute :photoIds, Types::Array.of(Types::Integer)
-    attribute :earliestEstimatedArrivalDate, Types::JSON::DateTime
-    attribute :latestEstimatedArrivalDate, Types::JSON::DateTime
+    attribute :earliestEstimatedArrivalDate, Types::JSON::DateTime.optional
+    attribute :latestEstimatedArrivalDate, Types::JSON::DateTime.optional
     attribute :shippedOn, Types::JSON::DateTime.optional
   end
 end
