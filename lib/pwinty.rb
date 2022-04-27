@@ -20,8 +20,8 @@ module Pwinty
 
   MERCHANT_ID = ENV['PWINTY_MERCHANT_ID']
   API_KEY     = ENV['PWINTY_API_KEY']
-  BASE_URL    = ENV['PWINTY_BASE_URL'] || 'https://sandbox.pwinty.com'
-  API_VERSION = 'v3.0'
+  BASE_URL    = ENV['PWINTY_BASE_URL'] || 'https://api.sandbox.pwinty.com'
+  API_VERSION = 'v4.0'
 
   class << self
     attr_accessor :logger
