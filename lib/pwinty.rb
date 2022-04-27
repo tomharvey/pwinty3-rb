@@ -38,8 +38,7 @@ module Pwinty
 
   def self.headers
     {
-      'X-Pwinty-MerchantId' => Pwinty::MERCHANT_ID,
-      'X-Pwinty-REST-API-Key' => Pwinty::API_KEY,
+      'X-API-Key' => Pwinty::API_KEY,
     }
   end
 
