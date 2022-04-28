@@ -3,16 +3,20 @@ require 'faraday_middleware'
 
 require "pwinty/base"
 require "pwinty/http_errors"
-require "pwinty/order"
-require "pwinty/order_status"
-require 'pwinty/product'
 require "pwinty/version"
+
+require "pwinty/api_models/order"
+require 'pwinty/api_models/product'
 
 module Pwinty
   class Error < StandardError; end
+  class OrderActionUnavailable < Pwinty::Error; end
   class AuthenticationError < Pwinty::Error; end
+  class InvalidContentTypeHeader < Pwinty::Error; end
+  class MethodNotAllowed < Pwinty::Error; end
   class OrderNotFound < Pwinty::Error; end
   class StateIsInvalid < Pwinty::Error; end
+  class ValidationError < Pwinty::Error; end
 
   MERCHANT_ID = ENV['PWINTY_MERCHANT_ID']
   API_KEY     = ENV['PWINTY_API_KEY']

@@ -24,12 +24,16 @@ module Helpers
     end
 
     def stub_order_item
-      Pwinty::OrderItem.new(
+      Pwinty::OrderItem.new(order_stub_attrs)
+    end
+
+    def order_stub_attrs
+      {
         sku: 'GLOBAL-PHO-4X6-PRO',
         copies: 1,
         attributes: {finish: 'lustre'},
         assets: [stub_order_item_asset]
-      )
+      }
     end
 
     def stub_order

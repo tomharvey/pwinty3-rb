@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.sandbox.prodigi.com/v4.0/orders?limit=50&start=0
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=0&top=10
     body:
       encoding: US-ASCII
       string: ''
@@ -32,9 +32,9 @@ http_interactions:
       Request-Context:
       - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
       Date:
-      - Thu, 28 Apr 2022 09:13:14 GMT
+      - Thu, 28 Apr 2022 20:41:54 GMT
     body:
       encoding: UTF-8
-      string: '{"outcome":"NotAuthenticated","traceParent":"00-3987e9c7551b94d8c96e311e3a24fed1-6c98200e13d81646-00"}'
-  recorded_at: Thu, 28 Apr 2022 09:13:15 GMT
+      string: '{"outcome":"NotAuthenticated","traceParent":"00-eeaf24c8cbd9613209a7ae04dcd225ff-4a3aa3c5cf436f4b-00"}'
+  recorded_at: Thu, 28 Apr 2022 20:41:54 GMT
 recorded_with: VCR 6.1.0

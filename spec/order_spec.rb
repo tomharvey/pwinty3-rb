@@ -53,25 +53,9 @@ RSpec.describe Pwinty::Order do
     expect(order.items[1].assets[0].url).to eq('http://example.com/mytestphoto.jpg')
   end
 
-  # it "can attempt to add an image to an order that will result in a pwinty api error" do
-  #   VCR.use_cassette('order/add_multi_images_which_will_api_error') do
-  #     order = create_order
-  #     expect(order.images.count).to eq 0
-
-  #     order.add_images(
-  #       [{
-  #         sku: "GLOBAL-PHO-4X6-PRO",
-  #         url: "myTestPhoto.jpg",
-  #         copies: 1,
-  #       }]
-  #     )
-  #     expect(order.images.count).to eq 0
-  #   end
-  # end
-
-  it "can serialize to a post body" do
+  it "can serialize" do
     order = stub_order
-    hashed_order = order.to_post_body
+    hashed_order = order.serializable
     expect(hashed_order).to eq({
       :items => [{:assets=>[{:printArea=>"default", :url=>"https://example.com/image.jpg"}], :attributes=>{:finish=>"lustre"}, :copies=>1, :sizing=>"fillPrintArea", :sku=>"GLOBAL-PHO-4X6-PRO"}],
       :recipient => {:address=>{:countryCode=>"US", :line1=>"1 Main Street", :postalOrZipCode=>"90210", :townOrCity=>"Holywood"}, :name=>"Testy McTestface"},
@@ -87,34 +71,12 @@ RSpec.describe Pwinty::Order do
     end
   end
 
-  # it "can get the shipment info from a submitted order" do
-  #   VCR.use_cassette('order/submitted_order--shipping_info') do
-  #     order = submitted_order
-  #     expect(order.shippingInfo).to be_an(Pwinty::ShippingInfo)
-
-  #     shipment = order.shippingInfo.shipments[0]
-  #     expect(shipment).to be_an(Pwinty::Shipment)
-  #   end
-  # end
-
-  # it "cannot hold a submitted order" do
-  #   VCR.use_cassette('order/submitted_order--hold_fail') do
-  #     order = submitted_order
-
-  #     expect(order.canHold).to be(false)
-  #     held = order.hold
-  #     expect(held).to be false
-  #   end
-  # end
-
-  # it "can cancel a submitted order " do
-  #   VCR.use_cassette('order/submitted_order--cancel_success') do
-  #     order = submitted_order
-
-  #     expect(order.canCancel).to be(true)
-  #     cancelled = order.cancel
-  #     expect(cancelled).to be true
-  #   end
-  # end
+  it "can cancel an order" do
+    VCR.use_cassette('order/cancel') do
+      order = Pwinty::Order.new(order_stub_attrs.update(id: 'ord_1059863'))
+      cancelled_order = order.cancel
+      expect(cancelled_order.status.stage).to eq('Cancelled')
+    end
+  end
 
 end
