@@ -8,6 +8,7 @@ require "pwinty/image"
 require "pwinty/order"
 require "pwinty/order_status"
 require 'pwinty/photo_status'
+require 'pwinty/product'
 require "pwinty/shipment"
 require "pwinty/shipping_info"
 require "pwinty/version"
@@ -20,7 +21,7 @@ module Pwinty
 
   MERCHANT_ID = ENV['PWINTY_MERCHANT_ID']
   API_KEY     = ENV['PWINTY_API_KEY']
-  BASE_URL    = ENV['PWINTY_BASE_URL'] || 'https://api.sandbox.pwinty.com'
+  BASE_URL    = ENV['PWINTY_BASE_URL'] || 'https://api.sandbox.prodigi.com'
   API_VERSION = 'v4.0'
 
   class << self
