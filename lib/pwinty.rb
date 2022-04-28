@@ -2,15 +2,10 @@ require 'faraday'
 require 'faraday_middleware'
 
 require "pwinty/base"
-require "pwinty/country"
 require "pwinty/http_errors"
-require "pwinty/image"
 require "pwinty/order"
 require "pwinty/order_status"
-require 'pwinty/photo_status'
 require 'pwinty/product'
-require "pwinty/shipment"
-require "pwinty/shipping_info"
 require "pwinty/version"
 
 module Pwinty

@@ -1,7 +1,5 @@
 require 'dry/struct/with_setters'
 
-require "pwinty/shipping_info"
-
 
 module Pwinty
 

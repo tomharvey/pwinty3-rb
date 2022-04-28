@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?limit=50&start=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Length:
+      - '102'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Www-Authenticate:
+      - Bearer
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 09:13:14 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"NotAuthenticated","traceParent":"00-3987e9c7551b94d8c96e311e3a24fed1-6c98200e13d81646-00"}'
+  recorded_at: Thu, 28 Apr 2022 09:13:15 GMT
+recorded_with: VCR 6.1.0

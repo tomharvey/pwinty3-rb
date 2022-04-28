@@ -1,0 +1,709 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=0&top=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '7561'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 12:34:59 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","hasMore":true,"nextUrl":"https://api.sandbox.prodigi.com/v4.0/Orders?Top=10&Skip=10","orders":[{"id":"ord_980865","created":"2021-05-14T14:47:22.147Z","lastUpdated":"2021-06-14T14:30:01.277Z","callbackUrl":null,"merchantReference":"0448e0a12454461abce0be77613199d0-1621003640","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980864","created":"2021-05-14T14:47:19.553Z","lastUpdated":"2021-06-14T14:30:01.23Z","callbackUrl":null,"merchantReference":"cd471cc9b446438cad0c0b72b7a5dd32-1621003638","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980863","created":"2021-05-14T14:47:17.943Z","lastUpdated":"2021-06-14T14:30:01.277Z","callbackUrl":null,"merchantReference":"0b257238df4844d0871cfc7aebba2280-1621003636","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980862","created":"2021-05-14T14:46:56.453Z","lastUpdated":"2021-06-14T14:30:01.277Z","callbackUrl":null,"merchantReference":"77767ffa7b06453c8d34de977fa50a5e-1621003615","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980861","created":"2021-05-14T14:46:55.593Z","lastUpdated":"2021-06-14T14:30:01.093Z","callbackUrl":null,"merchantReference":"eefd488cb9694004ac4365eccd79b4f0-1621003614","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980860","created":"2021-05-14T14:46:54.14Z","lastUpdated":"2021-06-14T14:30:01.12Z","callbackUrl":null,"merchantReference":"480a88d56b8043f09fda90fe71035cd8-1621003613","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980859","created":"2021-05-14T14:44:55.777Z","lastUpdated":"2021-06-14T14:30:01.137Z","callbackUrl":null,"merchantReference":"b45becb4a83e4654bdc16b3bcef1da36-1621003494","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980858","created":"2021-05-14T14:44:54.747Z","lastUpdated":"2021-06-14T14:30:01.143Z","callbackUrl":null,"merchantReference":"29ba969e53b0488db1dfbd126887b932-1621003493","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980857","created":"2021-05-14T14:44:53.307Z","lastUpdated":"2021-06-14T14:30:00.97Z","callbackUrl":null,"merchantReference":"393d8e72efbe42fc8c7f723ccebcd8fa-1621003491","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980856","created":"2021-05-14T14:43:59.053Z","lastUpdated":"2021-06-14T14:30:00.957Z","callbackUrl":null,"merchantReference":"4d6517811c674969907f51b4ae0cc791-1621003437","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null}],"traceParent":"00-4f87ec28d2594f35d3cdda1105ffd3f7-7dc732d4b809434e-00"}'
+  recorded_at: Thu, 28 Apr 2022 12:34:59 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=10&top=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '7556'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 12:34:59 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","hasMore":true,"nextUrl":"https://api.sandbox.prodigi.com/v4.0/Orders?Top=10&Skip=20","orders":[{"id":"ord_980855","created":"2021-05-14T14:43:57.91Z","lastUpdated":"2021-06-14T14:30:00.957Z","callbackUrl":null,"merchantReference":"299b15c974b44b3188b54b60b8267be9-1621003436","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980854","created":"2021-05-14T14:43:56.507Z","lastUpdated":"2021-06-14T14:30:00.997Z","callbackUrl":null,"merchantReference":"b3951944f231418aadf2fc8e456da9e4-1621003435","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980853","created":"2021-05-14T14:42:48.82Z","lastUpdated":"2021-06-14T14:30:00.9Z","callbackUrl":null,"merchantReference":"54003386c26d460f9923122c10275bac-1621003367","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980852","created":"2021-05-14T14:42:47.693Z","lastUpdated":"2021-06-14T14:30:00.867Z","callbackUrl":null,"merchantReference":"bd9a790434e04fa7b578932b532487ce-1621003366","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980851","created":"2021-05-14T14:42:46.087Z","lastUpdated":"2021-06-14T14:30:00.85Z","callbackUrl":null,"merchantReference":"84e5e7c2616d406289f3e6f28a4c2b4e-1621003364","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980850","created":"2021-05-14T14:42:27.537Z","lastUpdated":"2021-06-14T14:30:00.773Z","callbackUrl":null,"merchantReference":"687ec61d8661470f97299f44888737a5-1621003346","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980849","created":"2021-05-14T14:42:26.57Z","lastUpdated":"2021-06-14T14:30:00.74Z","callbackUrl":null,"merchantReference":"4c142b09698f4d9181d820d8a41be5e0-1621003345","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980848","created":"2021-05-14T14:42:25.693Z","lastUpdated":"2021-06-14T14:30:00.75Z","callbackUrl":null,"merchantReference":"0efda4ae83424d75a785c8c6f3e65069-1621003344","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980847","created":"2021-05-14T14:42:19.913Z","lastUpdated":"2021-06-14T14:30:00.74Z","callbackUrl":null,"merchantReference":"58c1879d8cd04352a5ca9d98ff75ac5e-1621003338","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980846","created":"2021-05-14T14:33:15.107Z","lastUpdated":"2021-06-14T14:30:00.667Z","callbackUrl":null,"merchantReference":"d0408efaa4ba4dcab3e575fe9ec9993d-1621002794","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null}],"traceParent":"00-c230246de53741dd4935a5b8c6af65e2-d4ba2fdabd24a844-00"}'
+  recorded_at: Thu, 28 Apr 2022 12:34:59 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=20&top=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '7553'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 12:34:59 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","hasMore":true,"nextUrl":"https://api.sandbox.prodigi.com/v4.0/Orders?Top=10&Skip=30","orders":[{"id":"ord_980845","created":"2021-05-14T14:33:14.247Z","lastUpdated":"2021-06-14T14:30:00.663Z","callbackUrl":null,"merchantReference":"6a1f53ef22194e479b13184a4198331f-1621002793","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980844","created":"2021-05-14T14:33:13.437Z","lastUpdated":"2021-06-14T14:30:00.683Z","callbackUrl":null,"merchantReference":"60b27b3c4d12433d9ab2fff8111fd64f-1621002792","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980843","created":"2021-05-14T14:33:08.013Z","lastUpdated":"2021-06-14T14:30:00.68Z","callbackUrl":null,"merchantReference":"22c1a721da5546d681e17381a9330658-1621002787","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980842","created":"2021-05-14T14:32:48.83Z","lastUpdated":"2021-06-14T14:30:00.52Z","callbackUrl":null,"merchantReference":"3e58c88961944d50bdf9381f686a0d3e-1621002768","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980841","created":"2021-05-14T14:32:48Z","lastUpdated":"2021-06-14T14:30:00.537Z","callbackUrl":null,"merchantReference":"e6c4a0dfc80d493c9c9cc89ab41c133d-1621002767","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980840","created":"2021-05-14T14:32:47.173Z","lastUpdated":"2021-06-14T14:30:00.523Z","callbackUrl":null,"merchantReference":"95c0d22cd49642c5bf1fd925f238e45e-1621002766","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980839","created":"2021-05-14T14:32:41.86Z","lastUpdated":"2021-06-14T14:30:00.523Z","callbackUrl":null,"merchantReference":"9762b88a44454539ab42f3cecb74b2e2-1621002760","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980818","created":"2021-05-13T15:37:39.58Z","lastUpdated":"2021-06-13T14:30:01.88Z","callbackUrl":null,"merchantReference":"01f61f8e26454762ab1c92a872643331-1620920257","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980817","created":"2021-05-13T15:37:38.75Z","lastUpdated":"2021-06-13T14:30:01.663Z","callbackUrl":null,"merchantReference":"d9f470b0c18d4ef38bc79e459d0b9489-1620920256","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980816","created":"2021-05-13T15:37:37.987Z","lastUpdated":"2021-06-13T14:30:01.66Z","callbackUrl":null,"merchantReference":"3041f70c5002440fa649ad128e75f762-1620920256","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null}],"traceParent":"00-6bdbc7f321311b55995b2248a5694fef-7feed6d298ac4845-00"}'
+  recorded_at: Thu, 28 Apr 2022 12:35:00 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=30&top=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '10023'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 12:34:59 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","hasMore":true,"nextUrl":"https://api.sandbox.prodigi.com/v4.0/Orders?Top=10&Skip=40","orders":[{"id":"ord_980815","created":"2021-05-13T15:37:32.55Z","lastUpdated":"2021-06-13T14:30:01.663Z","callbackUrl":null,"merchantReference":"e1ed945c89554973bce242414f8d26f5-1620920250","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_795145","created":"2019-08-27T12:31:33.1Z","lastUpdated":"2019-09-26T14:30:09.627Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Cancelled","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[{"id":"ori_1002065","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_795144","created":"2019-08-27T12:30:24.813Z","lastUpdated":"2019-09-26T14:30:09.58Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Complete","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"Complete","allocateProductionLocation":"Complete","inProduction":"Complete","shipping":"Complete"}},"charges":[{"id":"chg_391106","prodigiInvoiceNumber":"5535","totalCost":{"amount":"6.30","currency":"GBP"},"totalTax":{"amount":"1.05","currency":"GBP"},"items":[{"id":"chi_732413","itemId":null,"cost":{"amount":"5.00","currency":"GBP"},"shipmentId":null,"chargeType":"Other"},{"id":"chi_732414","itemId":null,"cost":{"amount":"0.25","currency":"GBP"},"shipmentId":null,"chargeType":"Other"}]}],"shipments":[{"id":"shp_551416","dispatchDate":"2019-08-27T12:44:33.017Z","carrier":{"name":"royalmail","service":"Royal
+        Mail First Class"},"fulfillmentLocation":{"countryCode":"GB","labCode":"uk1"},"tracking":{"number":"XYZ123456ABC","url":"http://www.royalmail.com/portal/rm/track?trackNumber=XYZ123456ABC"},"items":[{"itemId":"ori_1002064"}],"status":"Shipped"}],"recipient":{"name":"Tom
+        Harvey","email":null,"phoneNumber":null,"address":{"line1":"My House","line2":null,"postalOrZipCode":"G1
+        3XX","countryCode":"GB","townOrCity":"Glasgow","stateOrCounty":"Scotland"}},"items":[{"id":"ori_1002064","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_795143","created":"2019-08-27T12:30:22.957Z","lastUpdated":"2019-09-26T14:30:09.517Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[{"id":"ori_1002062","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null},{"id":"ori_1002063","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-10X12-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_795142","created":"2019-08-27T12:29:53.197Z","lastUpdated":"2019-09-26T14:30:09.453Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"House number","line2":"Street
+        address","postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_795042","created":"2019-08-26T13:04:16.187Z","lastUpdated":"2019-09-25T14:30:11.48Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Complete","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"Complete","allocateProductionLocation":"Complete","inProduction":"Complete","shipping":"Complete"}},"charges":[{"id":"chg_391076","prodigiInvoiceNumber":"5525","totalCost":{"amount":"6.30","currency":"GBP"},"totalTax":{"amount":"1.05","currency":"GBP"},"items":[{"id":"chi_732350","itemId":null,"cost":{"amount":"5.00","currency":"GBP"},"shipmentId":null,"chargeType":"Other"},{"id":"chi_732351","itemId":null,"cost":{"amount":"0.25","currency":"GBP"},"shipmentId":null,"chargeType":"Other"}]}],"shipments":[{"id":"shp_551382","dispatchDate":"2019-08-26T13:14:37.633Z","carrier":{"name":"royalmail","service":"Royal
+        Mail First Class"},"fulfillmentLocation":{"countryCode":"GB","labCode":"uk1"},"tracking":{"number":"XYZ123456ABC","url":"http://www.royalmail.com/portal/rm/track?trackNumber=XYZ123456ABC"},"items":[{"itemId":"ori_1001906"}],"status":"Shipped"}],"recipient":{"name":"Tom
+        Harvey","email":null,"phoneNumber":null,"address":{"line1":"My House","line2":null,"postalOrZipCode":"G1
+        3XX","countryCode":"GB","townOrCity":"Glasgow","stateOrCounty":"Scotland"}},"items":[{"id":"ori_1001906","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_795041","created":"2019-08-26T13:02:22.12Z","lastUpdated":"2019-09-25T14:30:11.44Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Cancelled","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Tom
+        Harvey","email":null,"phoneNumber":null,"address":{"line1":"My House","line2":null,"postalOrZipCode":"G1
+        3XX","countryCode":"GB","townOrCity":"Glasgow","stateOrCounty":"Scotland"}},"items":[{"id":"ori_1001905","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_795013","created":"2019-08-26T12:48:45.453Z","lastUpdated":"2019-09-25T14:30:10.323Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[{"id":"ori_1001876","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null},{"id":"ori_1001877","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-10X12-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_795012","created":"2019-08-26T12:47:34.257Z","lastUpdated":"2019-09-25T14:30:10.337Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_795011","created":"2019-08-26T12:47:06.387Z","lastUpdated":"2019-09-25T14:30:10.287Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null}],"traceParent":"00-b28d41f0415687755fcd7cb57aa22673-de65f9c31b9a9849-00"}'
+  recorded_at: Thu, 28 Apr 2022 12:35:00 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=40&top=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '6991'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 12:35:01 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","hasMore":true,"nextUrl":"https://api.sandbox.prodigi.com/v4.0/Orders?Top=10&Skip=50","orders":[{"id":"ord_794957","created":"2019-08-26T12:25:54.153Z","lastUpdated":"2019-09-25T14:30:07.867Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"House number","line2":"Street
+        address","postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794956","created":"2019-08-26T12:25:38.157Z","lastUpdated":"2019-09-25T14:30:07.743Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"House number","line2":"Street
+        address","postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794955","created":"2019-08-26T12:25:18.797Z","lastUpdated":"2019-09-25T14:30:07.803Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"House number","line2":"Street
+        address","postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794893","created":"2019-08-25T18:46:20.967Z","lastUpdated":"2019-09-25T14:30:04.477Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Cancelled","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"1 Street","line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794892","created":"2019-08-25T18:44:59.193Z","lastUpdated":"2019-09-25T14:30:04.51Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"1 Street","line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794891","created":"2019-08-25T18:44:35.113Z","lastUpdated":"2019-09-25T14:30:04.417Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"1 Street","line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794890","created":"2019-08-25T18:44:10.743Z","lastUpdated":"2019-09-25T14:30:04.353Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794889","created":"2019-08-25T18:25:45.503Z","lastUpdated":"2019-09-25T14:30:04.26Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794888","created":"2019-08-25T18:24:44.437Z","lastUpdated":"2019-09-25T14:30:04.303Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794887","created":"2019-08-25T18:23:38.857Z","lastUpdated":"2019-09-25T14:30:04.303Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null}],"traceParent":"00-d17c6e8c255738c44be0e8b7a6cc41cc-5c37d13e25257341-00"}'
+  recorded_at: Thu, 28 Apr 2022 12:35:00 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=0&top=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '7561'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 12:35:03 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","hasMore":true,"nextUrl":"https://api.sandbox.prodigi.com/v4.0/Orders?Top=10&Skip=10","orders":[{"id":"ord_980865","created":"2021-05-14T14:47:22.147Z","lastUpdated":"2021-06-14T14:30:01.277Z","callbackUrl":null,"merchantReference":"0448e0a12454461abce0be77613199d0-1621003640","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980864","created":"2021-05-14T14:47:19.553Z","lastUpdated":"2021-06-14T14:30:01.23Z","callbackUrl":null,"merchantReference":"cd471cc9b446438cad0c0b72b7a5dd32-1621003638","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980863","created":"2021-05-14T14:47:17.943Z","lastUpdated":"2021-06-14T14:30:01.277Z","callbackUrl":null,"merchantReference":"0b257238df4844d0871cfc7aebba2280-1621003636","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980862","created":"2021-05-14T14:46:56.453Z","lastUpdated":"2021-06-14T14:30:01.277Z","callbackUrl":null,"merchantReference":"77767ffa7b06453c8d34de977fa50a5e-1621003615","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980861","created":"2021-05-14T14:46:55.593Z","lastUpdated":"2021-06-14T14:30:01.093Z","callbackUrl":null,"merchantReference":"eefd488cb9694004ac4365eccd79b4f0-1621003614","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980860","created":"2021-05-14T14:46:54.14Z","lastUpdated":"2021-06-14T14:30:01.12Z","callbackUrl":null,"merchantReference":"480a88d56b8043f09fda90fe71035cd8-1621003613","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980859","created":"2021-05-14T14:44:55.777Z","lastUpdated":"2021-06-14T14:30:01.137Z","callbackUrl":null,"merchantReference":"b45becb4a83e4654bdc16b3bcef1da36-1621003494","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980858","created":"2021-05-14T14:44:54.747Z","lastUpdated":"2021-06-14T14:30:01.143Z","callbackUrl":null,"merchantReference":"29ba969e53b0488db1dfbd126887b932-1621003493","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980857","created":"2021-05-14T14:44:53.307Z","lastUpdated":"2021-06-14T14:30:00.97Z","callbackUrl":null,"merchantReference":"393d8e72efbe42fc8c7f723ccebcd8fa-1621003491","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980856","created":"2021-05-14T14:43:59.053Z","lastUpdated":"2021-06-14T14:30:00.957Z","callbackUrl":null,"merchantReference":"4d6517811c674969907f51b4ae0cc791-1621003437","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null}],"traceParent":"00-4473937810f514bd85f087e037d7e234-d1111224881e7740-00"}'
+  recorded_at: Thu, 28 Apr 2022 12:35:03 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=10&top=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '7556'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 12:35:03 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","hasMore":true,"nextUrl":"https://api.sandbox.prodigi.com/v4.0/Orders?Top=10&Skip=20","orders":[{"id":"ord_980855","created":"2021-05-14T14:43:57.91Z","lastUpdated":"2021-06-14T14:30:00.957Z","callbackUrl":null,"merchantReference":"299b15c974b44b3188b54b60b8267be9-1621003436","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980854","created":"2021-05-14T14:43:56.507Z","lastUpdated":"2021-06-14T14:30:00.997Z","callbackUrl":null,"merchantReference":"b3951944f231418aadf2fc8e456da9e4-1621003435","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980853","created":"2021-05-14T14:42:48.82Z","lastUpdated":"2021-06-14T14:30:00.9Z","callbackUrl":null,"merchantReference":"54003386c26d460f9923122c10275bac-1621003367","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980852","created":"2021-05-14T14:42:47.693Z","lastUpdated":"2021-06-14T14:30:00.867Z","callbackUrl":null,"merchantReference":"bd9a790434e04fa7b578932b532487ce-1621003366","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980851","created":"2021-05-14T14:42:46.087Z","lastUpdated":"2021-06-14T14:30:00.85Z","callbackUrl":null,"merchantReference":"84e5e7c2616d406289f3e6f28a4c2b4e-1621003364","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980850","created":"2021-05-14T14:42:27.537Z","lastUpdated":"2021-06-14T14:30:00.773Z","callbackUrl":null,"merchantReference":"687ec61d8661470f97299f44888737a5-1621003346","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980849","created":"2021-05-14T14:42:26.57Z","lastUpdated":"2021-06-14T14:30:00.74Z","callbackUrl":null,"merchantReference":"4c142b09698f4d9181d820d8a41be5e0-1621003345","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980848","created":"2021-05-14T14:42:25.693Z","lastUpdated":"2021-06-14T14:30:00.75Z","callbackUrl":null,"merchantReference":"0efda4ae83424d75a785c8c6f3e65069-1621003344","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980847","created":"2021-05-14T14:42:19.913Z","lastUpdated":"2021-06-14T14:30:00.74Z","callbackUrl":null,"merchantReference":"58c1879d8cd04352a5ca9d98ff75ac5e-1621003338","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980846","created":"2021-05-14T14:33:15.107Z","lastUpdated":"2021-06-14T14:30:00.667Z","callbackUrl":null,"merchantReference":"d0408efaa4ba4dcab3e575fe9ec9993d-1621002794","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null}],"traceParent":"00-9d4d8d01d845d61d3ce2e95aba11f6fc-0cfd25d4e15c6444-00"}'
+  recorded_at: Thu, 28 Apr 2022 12:35:03 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=20&top=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '7553'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 12:35:04 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","hasMore":true,"nextUrl":"https://api.sandbox.prodigi.com/v4.0/Orders?Top=10&Skip=30","orders":[{"id":"ord_980845","created":"2021-05-14T14:33:14.247Z","lastUpdated":"2021-06-14T14:30:00.663Z","callbackUrl":null,"merchantReference":"6a1f53ef22194e479b13184a4198331f-1621002793","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980844","created":"2021-05-14T14:33:13.437Z","lastUpdated":"2021-06-14T14:30:00.683Z","callbackUrl":null,"merchantReference":"60b27b3c4d12433d9ab2fff8111fd64f-1621002792","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980843","created":"2021-05-14T14:33:08.013Z","lastUpdated":"2021-06-14T14:30:00.68Z","callbackUrl":null,"merchantReference":"22c1a721da5546d681e17381a9330658-1621002787","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980842","created":"2021-05-14T14:32:48.83Z","lastUpdated":"2021-06-14T14:30:00.52Z","callbackUrl":null,"merchantReference":"3e58c88961944d50bdf9381f686a0d3e-1621002768","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980841","created":"2021-05-14T14:32:48Z","lastUpdated":"2021-06-14T14:30:00.537Z","callbackUrl":null,"merchantReference":"e6c4a0dfc80d493c9c9cc89ab41c133d-1621002767","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980840","created":"2021-05-14T14:32:47.173Z","lastUpdated":"2021-06-14T14:30:00.523Z","callbackUrl":null,"merchantReference":"95c0d22cd49642c5bf1fd925f238e45e-1621002766","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980839","created":"2021-05-14T14:32:41.86Z","lastUpdated":"2021-06-14T14:30:00.523Z","callbackUrl":null,"merchantReference":"9762b88a44454539ab42f3cecb74b2e2-1621002760","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980818","created":"2021-05-13T15:37:39.58Z","lastUpdated":"2021-06-13T14:30:01.88Z","callbackUrl":null,"merchantReference":"01f61f8e26454762ab1c92a872643331-1620920257","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980817","created":"2021-05-13T15:37:38.75Z","lastUpdated":"2021-06-13T14:30:01.663Z","callbackUrl":null,"merchantReference":"d9f470b0c18d4ef38bc79e459d0b9489-1620920256","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_980816","created":"2021-05-13T15:37:37.987Z","lastUpdated":"2021-06-13T14:30:01.66Z","callbackUrl":null,"merchantReference":"3041f70c5002440fa649ad128e75f762-1620920256","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null}],"traceParent":"00-3db6e6381ac25805e94f094412895435-68edf77c44716546-00"}'
+  recorded_at: Thu, 28 Apr 2022 12:35:04 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=30&top=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '10023'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 12:35:04 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","hasMore":true,"nextUrl":"https://api.sandbox.prodigi.com/v4.0/Orders?Top=10&Skip=40","orders":[{"id":"ord_980815","created":"2021-05-13T15:37:32.55Z","lastUpdated":"2021-06-13T14:30:01.663Z","callbackUrl":null,"merchantReference":"e1ed945c89554973bce242414f8d26f5-1620920250","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_795145","created":"2019-08-27T12:31:33.1Z","lastUpdated":"2019-09-26T14:30:09.627Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Cancelled","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[{"id":"ori_1002065","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_795144","created":"2019-08-27T12:30:24.813Z","lastUpdated":"2019-09-26T14:30:09.58Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Complete","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"Complete","allocateProductionLocation":"Complete","inProduction":"Complete","shipping":"Complete"}},"charges":[{"id":"chg_391106","prodigiInvoiceNumber":"5535","totalCost":{"amount":"6.30","currency":"GBP"},"totalTax":{"amount":"1.05","currency":"GBP"},"items":[{"id":"chi_732413","itemId":null,"cost":{"amount":"5.00","currency":"GBP"},"shipmentId":null,"chargeType":"Other"},{"id":"chi_732414","itemId":null,"cost":{"amount":"0.25","currency":"GBP"},"shipmentId":null,"chargeType":"Other"}]}],"shipments":[{"id":"shp_551416","dispatchDate":"2019-08-27T12:44:33.017Z","carrier":{"name":"royalmail","service":"Royal
+        Mail First Class"},"fulfillmentLocation":{"countryCode":"GB","labCode":"uk1"},"tracking":{"number":"XYZ123456ABC","url":"http://www.royalmail.com/portal/rm/track?trackNumber=XYZ123456ABC"},"items":[{"itemId":"ori_1002064"}],"status":"Shipped"}],"recipient":{"name":"Tom
+        Harvey","email":null,"phoneNumber":null,"address":{"line1":"My House","line2":null,"postalOrZipCode":"G1
+        3XX","countryCode":"GB","townOrCity":"Glasgow","stateOrCounty":"Scotland"}},"items":[{"id":"ori_1002064","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_795143","created":"2019-08-27T12:30:22.957Z","lastUpdated":"2019-09-26T14:30:09.517Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[{"id":"ori_1002062","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null},{"id":"ori_1002063","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-10X12-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_795142","created":"2019-08-27T12:29:53.197Z","lastUpdated":"2019-09-26T14:30:09.453Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"House number","line2":"Street
+        address","postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_795042","created":"2019-08-26T13:04:16.187Z","lastUpdated":"2019-09-25T14:30:11.48Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Complete","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"Complete","allocateProductionLocation":"Complete","inProduction":"Complete","shipping":"Complete"}},"charges":[{"id":"chg_391076","prodigiInvoiceNumber":"5525","totalCost":{"amount":"6.30","currency":"GBP"},"totalTax":{"amount":"1.05","currency":"GBP"},"items":[{"id":"chi_732350","itemId":null,"cost":{"amount":"5.00","currency":"GBP"},"shipmentId":null,"chargeType":"Other"},{"id":"chi_732351","itemId":null,"cost":{"amount":"0.25","currency":"GBP"},"shipmentId":null,"chargeType":"Other"}]}],"shipments":[{"id":"shp_551382","dispatchDate":"2019-08-26T13:14:37.633Z","carrier":{"name":"royalmail","service":"Royal
+        Mail First Class"},"fulfillmentLocation":{"countryCode":"GB","labCode":"uk1"},"tracking":{"number":"XYZ123456ABC","url":"http://www.royalmail.com/portal/rm/track?trackNumber=XYZ123456ABC"},"items":[{"itemId":"ori_1001906"}],"status":"Shipped"}],"recipient":{"name":"Tom
+        Harvey","email":null,"phoneNumber":null,"address":{"line1":"My House","line2":null,"postalOrZipCode":"G1
+        3XX","countryCode":"GB","townOrCity":"Glasgow","stateOrCounty":"Scotland"}},"items":[{"id":"ori_1001906","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_795041","created":"2019-08-26T13:02:22.12Z","lastUpdated":"2019-09-25T14:30:11.44Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Cancelled","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Tom
+        Harvey","email":null,"phoneNumber":null,"address":{"line1":"My House","line2":null,"postalOrZipCode":"G1
+        3XX","countryCode":"GB","townOrCity":"Glasgow","stateOrCounty":"Scotland"}},"items":[{"id":"ori_1001905","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_795013","created":"2019-08-26T12:48:45.453Z","lastUpdated":"2019-09-25T14:30:10.323Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[{"id":"ori_1001876","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null},{"id":"ori_1001877","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-10X12-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_795012","created":"2019-08-26T12:47:34.257Z","lastUpdated":"2019-09-25T14:30:10.337Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_795011","created":"2019-08-26T12:47:06.387Z","lastUpdated":"2019-09-25T14:30:10.287Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null}],"traceParent":"00-7a741ddfc4a65f49efe17fd94cd2cada-d1fd34ac9a579e42-00"}'
+  recorded_at: Thu, 28 Apr 2022 12:35:04 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=40&top=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '6991'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 12:35:05 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","hasMore":true,"nextUrl":"https://api.sandbox.prodigi.com/v4.0/Orders?Top=10&Skip=50","orders":[{"id":"ord_794957","created":"2019-08-26T12:25:54.153Z","lastUpdated":"2019-09-25T14:30:07.867Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"House number","line2":"Street
+        address","postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794956","created":"2019-08-26T12:25:38.157Z","lastUpdated":"2019-09-25T14:30:07.743Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"House number","line2":"Street
+        address","postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794955","created":"2019-08-26T12:25:18.797Z","lastUpdated":"2019-09-25T14:30:07.803Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"House number","line2":"Street
+        address","postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794893","created":"2019-08-25T18:46:20.967Z","lastUpdated":"2019-09-25T14:30:04.477Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Cancelled","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"1 Street","line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794892","created":"2019-08-25T18:44:59.193Z","lastUpdated":"2019-09-25T14:30:04.51Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"1 Street","line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794891","created":"2019-08-25T18:44:35.113Z","lastUpdated":"2019-09-25T14:30:04.417Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":"1 Street","line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794890","created":"2019-08-25T18:44:10.743Z","lastUpdated":"2019-09-25T14:30:04.353Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794889","created":"2019-08-25T18:25:45.503Z","lastUpdated":"2019-09-25T14:30:04.26Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794888","created":"2019-08-25T18:24:44.437Z","lastUpdated":"2019-09-25T14:30:04.303Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794887","created":"2019-08-25T18:23:38.857Z","lastUpdated":"2019-09-25T14:30:04.303Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null}],"traceParent":"00-cd0e7b63a992832c169853ede9b247f8-35daff26100fbe4d-00"}'
+  recorded_at: Thu, 28 Apr 2022 12:35:05 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=50&top=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '7081'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 12:35:05 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","hasMore":true,"nextUrl":"https://api.sandbox.prodigi.com/v4.0/Orders?Top=10&Skip=60","orders":[{"id":"ord_794886","created":"2019-08-25T18:11:28.543Z","lastUpdated":"2019-09-25T14:30:04.303Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":null,"email":null,"phoneNumber":null,"address":{"line1":"1
+        Street","line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794885","created":"2019-08-25T18:11:27.093Z","lastUpdated":"2019-09-25T14:30:04.1Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[{"id":"ori_1001850","status":"Ok","merchantReference":null,"sku":"GLOBAL-PHO-4X6-PRO","copies":1,"sizing":"fillPrintArea","thumbnailUrl":null,"attributes":{},"assets":[],"recipientCost":null}],"packingSlip":null,"metadata":null},{"id":"ord_794883","created":"2019-08-25T18:04:39.53Z","lastUpdated":"2019-09-25T14:30:04.037Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794882","created":"2019-08-25T18:04:36.497Z","lastUpdated":"2019-09-25T14:30:03.99Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794881","created":"2019-08-25T18:04:02.893Z","lastUpdated":"2019-09-25T14:30:03.977Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794880","created":"2019-08-25T18:04:02.017Z","lastUpdated":"2019-09-25T14:30:03.917Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794879","created":"2019-08-25T18:01:39.187Z","lastUpdated":"2019-09-25T14:30:03.913Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794878","created":"2019-08-25T18:01:37.373Z","lastUpdated":"2019-09-25T14:30:03.913Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794877","created":"2019-08-25T17:54:23.763Z","lastUpdated":"2019-09-25T14:30:03.87Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794876","created":"2019-08-25T17:54:22.737Z","lastUpdated":"2019-09-25T14:30:03.773Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null}],"traceParent":"00-9eacdec629d505e444e4eaee823131f5-79bce864a8c65c43-00"}'
+  recorded_at: Thu, 28 Apr 2022 12:35:05 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=60&top=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '6844'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 12:35:06 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","hasMore":false,"nextUrl":null,"orders":[{"id":"ord_794875","created":"2019-08-25T17:41:38.52Z","lastUpdated":"2019-09-25T14:30:03.757Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794836","created":"2019-08-25T10:09:57.207Z","lastUpdated":"2019-09-24T14:30:04.953Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794835","created":"2019-08-25T09:53:57.84Z","lastUpdated":"2019-09-24T14:30:04.907Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794823","created":"2019-08-24T17:38:46.813Z","lastUpdated":"2019-09-24T14:30:04.123Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794822","created":"2019-08-24T17:20:41.687Z","lastUpdated":"2019-09-24T14:30:04.06Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794821","created":"2019-08-24T17:20:05.163Z","lastUpdated":"2019-09-24T14:30:04.013Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794820","created":"2019-08-24T17:19:33.35Z","lastUpdated":"2019-09-24T14:30:03.98Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794819","created":"2019-08-24T17:18:45.397Z","lastUpdated":"2019-09-24T14:30:03.92Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794818","created":"2019-08-24T17:10:36.397Z","lastUpdated":"2019-09-24T14:30:03.887Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},{"id":"ord_794817","created":"2019-08-24T17:09:41.387Z","lastUpdated":"2019-09-24T14:30:03.823Z","callbackUrl":null,"merchantReference":null,"shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"FirstName
+        LastName","email":null,"phoneNumber":null,"address":{"line1":null,"line2":null,"postalOrZipCode":null,"countryCode":"US","townOrCity":null,"stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null}],"traceParent":"00-19659586074b470493862eaa2936e046-d1897c579922af4f-00"}'
+  recorded_at: Thu, 28 Apr 2022 12:35:06 GMT
+recorded_with: VCR 6.1.0

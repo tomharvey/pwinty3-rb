@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/orders/ord_980865
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '834'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 09:46:54 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","order":{"id":"ord_980865","created":"2021-05-14T14:47:22.147Z","lastUpdated":"2021-06-14T14:30:01.277Z","callbackUrl":null,"merchantReference":"0448e0a12454461abce0be77613199d0-1621003640","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},"traceParent":"00-9a9f98c3c7a676feb26347c71b891fa7-a9ca776258968742-00"}'
+  recorded_at: Thu, 28 Apr 2022 09:46:55 GMT
+recorded_with: VCR 6.1.0
