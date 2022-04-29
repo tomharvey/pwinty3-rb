@@ -75,20 +75,20 @@ to understand the full list of attributes to send.
 
 ``` ruby
 order = Pwinty::Order.new(
-    shippingMethod: "Budget",
-		recipient: {
-			name: "Tom Harvey",
-		},
-		items: [
-			{
-				sku: "GLOBAL-PHO-4X6-PRO",
-				copies: 1,
-				assets: [
-					{url: 'https://example.com/image.jpg'}
-				],
-				attributes: {finish: 'lustre'},
-			}
-		]
+  shippingMethod: "Budget",
+  recipient: {
+    name: "Tom Harvey",
+  },
+  items: [
+    {
+      sku: "GLOBAL-PHO-4X6-PRO",
+      copies: 1,
+      assets: [
+        {url: 'https://example.com/image.jpg'},
+			],
+      attributes: {finish: 'lustre'},
+    },
+  ]
 )
 
 submitted_order = order.submit
