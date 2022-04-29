@@ -7,7 +7,7 @@
 [![Known Vulnerabilities](https://snyk.io//test/github/tomharvey/pwinty3-rb/badge.svg?targetFile=Gemfile.lock)](https://snyk.io//test/github/tomharvey/pwinty3-rb?targetFile=Gemfile.lock)
 
 
-This wraps the Pwinty (recently rebranded as Prodigi) API at version 4 and aims to make your ruby life easier
+This wraps the Prodigi Pwinty API at version 4 and aims to make your ruby life easier
 when interacting with the API.
 
 See https://www.prodigi.com and https://www.prodigi.com/print-api/docs/ for more details around the

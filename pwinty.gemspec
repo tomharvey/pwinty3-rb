@@ -9,14 +9,14 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Thomas Harvey"]
   spec.email         = ["tom@alush.co.uk"]
 
-  spec.summary       = %q{Order photo prints through Pwinty}
-  spec.description   = "This wraps the Pwinty API at version 3 and aims to make your ruby life easier when interacting with the API."
+  spec.summary       = %q{Order photo prints through the Prodigi Pwinty API}
+  spec.description   = "This wraps the Pwinty API at version 4 and aims to make your ruby life easier when interacting with the API."
   spec.homepage      = "https://github.com/tomharvey/pwinty3-rb"
   spec.license       = "MIT"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
-  spec.metadata["documentation_uri"] = "https://pwinty.com/api/"
+  spec.metadata["documentation_uri"] = "https://www.prodigi.com/print-api/docs/"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
