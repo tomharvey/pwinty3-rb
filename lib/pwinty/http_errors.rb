@@ -3,10 +3,12 @@ module Pwinty
     def on_complete(env)
       msg = env[:body]
       case env[:status]
-      when 401; raise Pwinty::AuthenticationError, msg
-      when 403; raise Pwinty::StateIsInvalid, msg
-      when 404; raise Pwinty::NotFound, msg
-      when 500; raise Pwinty::Error, msg
+        when 400; raise Pwinty::ValidationError, msg
+        when 401; raise Pwinty::AuthenticationError, msg
+        when 404; raise Pwinty::NotFound, msg
+        when 405; raise Pwinty::MethodNotAllowed, msg
+        when 415; raise Pwinty::InvalidContentTypeHeader, msg
+        when 500; raise Pwinty::Error, msg
       end
     end
   end

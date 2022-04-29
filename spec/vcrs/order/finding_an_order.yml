@@ -1,74 +1,16 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://sandbox.pwinty.com/v3.0/orders
-    body:
-      encoding: UTF-8
-      string: '{"recipientName":"FirstName LastName","countryCode":"US","preferredShippingMethod":"Budget"}'
-    headers:
-      X-Pwinty-Merchantid:
-      - "<MERCHANT_ID>"
-      X-Pwinty-Rest-Api-Key:
-      - "<API_KEY>"
-      User-Agent:
-      - Faraday v0.17.3
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache
-      Pragma:
-      - no-cache
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - application/json; charset=utf-8
-      Expires:
-      - "-1"
-      Vary:
-      - Accept-Encoding
-      Server:
-      - Microsoft-IIS/10.0
-      X-Aspnet-Version:
-      - 4.0.30319
-      Request-Context:
-      - appId=cid-v1:92ed31ef-d5f4-4c95-8d9e-7ffc10f901a6
-      Access-Control-Expose-Headers:
-      - Request-Context
-      X-Powered-By:
-      - ASP.NET
-      Arr-Disable-Session-Affinity:
-      - 'True'
-      Date:
-      - Fri, 05 Jun 2020 17:19:42 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: '{"data":{"id":877669,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
-        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2020-06-05T17:19:43.3683803Z","lastUpdated":"2020-06-05T17:19:43.3683803Z","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"packingSlipUrl":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
-    http_version: null
-  recorded_at: Fri, 05 Jun 2020 17:19:43 GMT
-- request:
     method: get
-    uri: https://sandbox.pwinty.com/v3.0/orders/877669
+    uri: https://api.sandbox.prodigi.com/v4.0/orders/ord_980865
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      X-Pwinty-Merchantid:
-      - "<MERCHANT_ID>"
-      X-Pwinty-Rest-Api-Key:
+      X-Api-Key:
       - "<API_KEY>"
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v1.10.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -78,36 +20,24 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Pragma:
-      - no-cache
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '834'
       Content-Type:
       - application/json; charset=utf-8
-      Expires:
-      - "-1"
-      Vary:
-      - Accept-Encoding
       Server:
-      - Microsoft-IIS/10.0
-      X-Aspnet-Version:
-      - 4.0.30319
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
       Request-Context:
-      - appId=cid-v1:92ed31ef-d5f4-4c95-8d9e-7ffc10f901a6
-      Access-Control-Expose-Headers:
-      - Request-Context
-      X-Powered-By:
-      - ASP.NET
-      Arr-Disable-Session-Affinity:
-      - 'True'
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
       Date:
-      - Fri, 05 Jun 2020 17:19:43 GMT
+      - Thu, 28 Apr 2022 09:46:54 GMT
     body:
-      encoding: ASCII-8BIT
-      string: '{"data":{"id":877669,"address1":null,"address2":null,"postalOrZipCode":null,"countryCode":"US","addressTownOrCity":null,"recipientName":"FirstName
-        LastName","stateOrCounty":null,"status":"NotYetSubmitted","payment":"InvoiceMe","paymentUrl":null,"price":0,"shippingInfo":{"price":0,"shipments":[]},"images":[],"invoiceAmountNet":0,"invoiceTax":0,"invoiceCurrency":null,"merchantOrderId":null,"preferredShippingMethod":"Budget","mobileTelephone":null,"created":"2020-06-05T17:19:43.367","lastUpdated":"2020-06-05T17:19:43.367","canCancel":true,"canHold":true,"canUpdateShipping":true,"canUpdateImages":false,"tag":null,"packingSlipUrl":null,"errorMessage":null},"statusTxt":"OK","statusCode":200}'
-    http_version: null
-  recorded_at: Fri, 05 Jun 2020 17:19:44 GMT
-recorded_with: VCR 5.1.0
+      encoding: UTF-8
+      string: '{"outcome":"Ok","order":{"id":"ord_980865","created":"2021-05-14T14:47:22.147Z","lastUpdated":"2021-06-14T14:30:01.277Z","callbackUrl":null,"merchantReference":"0448e0a12454461abce0be77613199d0-1621003640","shippingMethod":"Budget","idempotencyKey":null,"status":{"stage":"Draft","issues":[],"details":{"downloadAssets":"NotStarted","printReadyAssetsPrepared":"NotStarted","allocateProductionLocation":"NotStarted","inProduction":"NotStarted","shipping":"NotStarted"}},"charges":[],"shipments":[],"recipient":{"name":"Test
+        Customer","email":null,"phoneNumber":null,"address":{"line1":"Test Street
+        Address","line2":null,"postalOrZipCode":"TEST ZIP","countryCode":"GB","townOrCity":"Test
+        City","stateOrCounty":null}},"items":[],"packingSlip":null,"metadata":null},"traceParent":"00-9a9f98c3c7a676feb26347c71b891fa7-a9ca776258968742-00"}'
+  recorded_at: Thu, 28 Apr 2022 09:46:55 GMT
+recorded_with: VCR 6.1.0

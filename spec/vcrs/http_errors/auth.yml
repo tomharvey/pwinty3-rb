@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.pwinty.com/v3.0/orders?limit=50&start=0
+    uri: https://api.sandbox.prodigi.com/v4.0/orders?skip=0&top=10
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v1.10.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -18,36 +18,23 @@ http_interactions:
       code: 401
       message: Unauthorized
     headers:
-      Cache-Control:
-      - no-cache
-      Pragma:
-      - no-cache
       Content-Length:
-      - '61'
+      - '102'
       Content-Type:
       - application/json; charset=utf-8
-      Expires:
-      - "-1"
       Server:
-      - Microsoft-IIS/10.0
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
       Www-Authenticate:
       - Bearer
-      - Bearer
-      X-Aspnet-Version:
-      - 4.0.30319
       Request-Context:
-      - appId=cid-v1:92ed31ef-d5f4-4c95-8d9e-7ffc10f901a6
-      Access-Control-Expose-Headers:
-      - Request-Context
-      X-Powered-By:
-      - ASP.NET
-      Arr-Disable-Session-Affinity:
-      - 'True'
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
       Date:
-      - Fri, 05 Jun 2020 17:19:41 GMT
+      - Thu, 28 Apr 2022 20:41:54 GMT
     body:
       encoding: UTF-8
-      string: '{"message":"Authorization has been denied for this request."}'
-    http_version: null
-  recorded_at: Fri, 05 Jun 2020 17:19:41 GMT
-recorded_with: VCR 5.1.0
+      string: '{"outcome":"NotAuthenticated","traceParent":"00-eeaf24c8cbd9613209a7ae04dcd225ff-4a3aa3c5cf436f4b-00"}'
+  recorded_at: Thu, 28 Apr 2022 20:41:54 GMT
+recorded_with: VCR 6.1.0

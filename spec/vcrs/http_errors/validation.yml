@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.sandbox.prodigi.com/v4.0/orders
+    body:
+      encoding: UTF-8
+      string: '{"shippingMethod":"Budget","recipient":{"address":{}},"items":[]}'
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Length:
+      - '532'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Set-Cookie:
+      - ARRAffinity=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;Secure;Domain=api.sandbox.prodigi.com
+      - ARRAffinitySameSite=9bc3e57960773edb3408c581dbfe6e2a119577c37fb6d5a2de646503cf932eae;Path=/;HttpOnly;SameSite=None;Secure;Domain=api.sandbox.prodigi.com
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 21:09:10 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"ValidationFailed","failures":{"recipient.name":[{"code":"Required","providedValue":null}],"recipient.address.line1":[{"code":"Required","providedValue":null}],"recipient.address.townOrCity":[{"code":"Required","providedValue":null}],"recipient.address.countryCode":[{"code":"Required","providedValue":null}],"recipient.address.postalOrZipCode":[{"code":"Required","providedValue":null}],"items":[{"code":"MustNotBeEmptyArray","providedValue":[]}]},"traceParent":"00-3c88eb3f8a719e0cf398ee2f7ad55d33-895b00afcd143641-00"}'
+  recorded_at: Thu, 28 Apr 2022 21:09:11 GMT
+recorded_with: VCR 6.1.0

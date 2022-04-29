@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.sandbox.prodigi.com/v4.0/products/GLOBAL-CAN-4X6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v1.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '6259'
+      Content-Type:
+      - application/json
+      Server:
+      - Kestrel
+      Request-Context:
+      - appId=cid-v1:69d939ae-017e-472a-b2f9-e2aaccfd7c45
+      Date:
+      - Thu, 28 Apr 2022 09:13:19 GMT
+    body:
+      encoding: UTF-8
+      string: '{"outcome":"Ok","product":{"sku":"GLOBAL-CAN-4X6","description":"Stretched
+        Canvas on a 38mm Standard Stretcher Bar, 4x6 inches / 10x15 cm","productDimensions":{"width":4.0000,"height":6.0000,"units":"in"},"attributes":{"wrap":["Black","ImageWrap","MirrorWrap","White"],"glaze":["None"],"frame":["38mm
+        Standard Stretcher Bar"],"edge":["38mm"]},"printAreas":{"default":{"required":true}},"variants":[{"attributes":{"wrap":"Black","glaze":"None","frame":"38mm
+        Standard Stretcher Bar","edge":"38mm"},"shipsTo":["IM","LU","ID","CI","GR","FK","AL","LA","KY","BW","PK","DZ","HN","MV","VU","MY","BZ","JO","AO","PG","WF","MC","ET","GL","VA","LI","AR","SA","UZ","HK","MF","PW","ZM","RU","BG","UG","BN","BT","NL","GG","LC","KE","IQ","TM","TD","SV","VE","SC","DK","VC","SE","RE","CA","KH","NR","XK","AG","AX","ZA","MH","CD","FJ","CM","FO","LY","LV","AN","UY","TH","BS","GT","DJ","CX","VN","AD","BJ","NZ","SB","KN","SN","US","ER","MG","CF","MN","PY","NE","GD","GM","LB","TC","ES","BY","AW","HR","SK","FR","AS","MK","BL","NO","HT","GW","EG","NI","AZ","PR","CH","PT","BR","MU","IE","AT","GQ","NA","PL","GI","TL","MQ","KR","AU","NF","RO","SR","CG","FI","GU","BM","MX","YT","TZ","DM","QA","GA","BD","ZW","AI","TG","LK","PE","IN","IT","MS","CZ","NC","LR","SL","TW","RS","CK","TJ","KG","PM","SX","VG","BA","GE","GY","CN","MR","JM","AM","TO","SG","GH","HU","WS","MP","BI","FM","JE","AE","PA","TN","CO","ML","GB","MZ","IL","GN","BF","GP","CV","CY","BO","UA","DO","ST","NG","ME","MT","KM","TV","PF","SM","NP","RW","MW","JP","MM","MD","LT","IS","MO","CR","VI","OM","BH","SI","AF","LS","GF","KW","EE","TR","TT","EC","CL","PH","MA","DE","KZ","BB","KI","SZ","NU","BE","XX","SD","PN","SO","ZZ","IR","EH","UM","HM","KP","IO","GS","TF","BV","CC","SJ","AQ","SH","TK","SY","CU","YE","PS"],"printAreaSizes":{"default":{"horizontalResolution":622,"verticalResolution":922}}},{"attributes":{"wrap":"ImageWrap","glaze":"None","frame":"38mm
+        Standard Stretcher Bar","edge":"38mm"},"shipsTo":["IM","LU","ID","CI","GR","FK","AL","LA","KY","BW","PK","DZ","HN","MV","VU","MY","BZ","JO","AO","PG","WF","MC","ET","GL","VA","LI","AR","SA","UZ","HK","MF","PW","ZM","RU","BG","UG","BN","BT","NL","GG","LC","KE","IQ","TM","TD","SV","VE","SC","DK","VC","SE","RE","CA","KH","NR","XK","AG","AX","ZA","MH","CD","FJ","CM","FO","LY","LV","AN","UY","TH","BS","GT","DJ","CX","VN","AD","BJ","NZ","SB","KN","SN","US","ER","MG","CF","MN","PY","NE","GD","GM","LB","TC","ES","BY","AW","HR","SK","FR","AS","MK","BL","NO","HT","GW","EG","NI","AZ","PR","CH","PT","BR","MU","IE","AT","GQ","NA","PL","GI","TL","MQ","KR","AU","NF","RO","SR","CG","FI","GU","BM","MX","YT","TZ","DM","QA","GA","BD","ZW","AI","TG","LK","PE","IN","IT","MS","CZ","NC","LR","SL","TW","RS","CK","TJ","KG","PM","SX","VG","BA","GE","GY","CN","MR","JM","AM","TO","SG","GH","HU","WS","MP","BI","FM","JE","AE","PA","TN","CO","ML","GB","MZ","IL","GN","BF","GP","CV","CY","BO","UA","DO","ST","NG","ME","MT","KM","TV","PF","SM","NP","RW","MW","JP","MM","MD","LT","IS","MO","CR","VI","OM","BH","SI","AF","LS","GF","KW","EE","TR","TT","EC","CL","PH","MA","DE","KZ","BB","KI","SZ","NU","BE","XX","SD","PN","SO","ZZ","IR","EH","UM","HM","KP","IO","GS","TF","BV","CC","SJ","AQ","SH","TK","SY","CU","YE","PS"],"printAreaSizes":{"default":{"horizontalResolution":1200,"verticalResolution":1500}}},{"attributes":{"wrap":"MirrorWrap","glaze":"None","frame":"38mm
+        Standard Stretcher Bar","edge":"38mm"},"shipsTo":["IM","LU","ID","CI","GR","FK","AL","LA","KY","BW","PK","DZ","HN","MV","VU","MY","BZ","JO","AO","PG","WF","MC","ET","GL","VA","LI","AR","SA","UZ","HK","MF","PW","ZM","RU","BG","UG","BN","BT","NL","GG","LC","KE","IQ","TM","TD","SV","VE","SC","DK","VC","SE","RE","CA","KH","NR","XK","AG","AX","ZA","MH","CD","FJ","CM","FO","LY","LV","AN","UY","TH","BS","GT","DJ","CX","VN","AD","BJ","NZ","SB","KN","SN","US","ER","MG","CF","MN","PY","NE","GD","GM","LB","TC","ES","BY","AW","HR","SK","FR","AS","MK","BL","NO","HT","GW","EG","NI","AZ","PR","CH","PT","BR","MU","IE","AT","GQ","NA","PL","GI","TL","MQ","KR","AU","NF","RO","SR","CG","FI","GU","BM","MX","YT","TZ","DM","QA","GA","BD","ZW","AI","TG","LK","PE","IN","IT","MS","CZ","NC","LR","SL","TW","RS","CK","TJ","KG","PM","SX","VG","BA","GE","GY","CN","MR","JM","AM","TO","SG","GH","HU","WS","MP","BI","FM","JE","AE","PA","TN","CO","ML","GB","MZ","IL","GN","BF","GP","CV","CY","BO","UA","DO","ST","NG","ME","MT","KM","TV","PF","SM","NP","RW","MW","JP","MM","MD","LT","IS","MO","CR","VI","OM","BH","SI","AF","LS","GF","KW","EE","TR","TT","EC","CL","PH","MA","DE","KZ","BB","KI","SZ","NU","BE","XX","SD","PN","SO","ZZ","IR","EH","UM","HM","KP","IO","GS","TF","BV","CC","SJ","AQ","SH","TK","SY","CU","YE","PS"],"printAreaSizes":{"default":{"horizontalResolution":622,"verticalResolution":922}}},{"attributes":{"wrap":"White","glaze":"None","frame":"38mm
+        Standard Stretcher Bar","edge":"38mm"},"shipsTo":["IM","LU","ID","CI","GR","FK","AL","LA","KY","BW","PK","DZ","HN","MV","VU","MY","BZ","JO","AO","PG","WF","MC","ET","GL","VA","LI","AR","SA","UZ","HK","MF","PW","ZM","RU","BG","UG","BN","BT","NL","GG","LC","KE","IQ","TM","TD","SV","VE","SC","DK","VC","SE","RE","CA","KH","NR","XK","AG","AX","ZA","MH","CD","FJ","CM","FO","LY","LV","AN","UY","TH","BS","GT","DJ","CX","VN","AD","BJ","NZ","SB","KN","SN","US","ER","MG","CF","MN","PY","NE","GD","GM","LB","TC","ES","BY","AW","HR","SK","FR","AS","MK","BL","NO","HT","GW","EG","NI","AZ","PR","CH","PT","BR","MU","IE","AT","GQ","NA","PL","GI","TL","MQ","KR","AU","NF","RO","SR","CG","FI","GU","BM","MX","YT","TZ","DM","QA","GA","BD","ZW","AI","TG","LK","PE","IN","IT","MS","CZ","NC","LR","SL","TW","RS","CK","TJ","KG","PM","SX","VG","BA","GE","GY","CN","MR","JM","AM","TO","SG","GH","HU","WS","MP","BI","FM","JE","AE","PA","TN","CO","ML","GB","MZ","IL","GN","BF","GP","CV","CY","BO","UA","DO","ST","NG","ME","MT","KM","TV","PF","SM","NP","RW","MW","JP","MM","MD","LT","IS","MO","CR","VI","OM","BH","SI","AF","LS","GF","KW","EE","TR","TT","EC","CL","PH","MA","DE","KZ","BB","KI","SZ","NU","BE","XX","SD","PN","SO","ZZ","IR","EH","UM","HM","KP","IO","GS","TF","BV","CC","SJ","AQ","SH","TK","SY","CU","YE","PS"],"printAreaSizes":{"default":{"horizontalResolution":622,"verticalResolution":922}}}]},"traceParent":"00-c2e408aa1b706a0c3155320174bfcfac-daa47c526414ec43-00"}'
+  recorded_at: Thu, 28 Apr 2022 09:13:20 GMT
+recorded_with: VCR 6.1.0
