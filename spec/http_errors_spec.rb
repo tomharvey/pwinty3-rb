@@ -32,5 +32,4 @@ RSpec.describe Pwinty::HttpErrors do
       expect { order = Pwinty::Order.find('ord_9') }.to raise_error(Pwinty::NotFound)
     end
   end
-
 end
