@@ -14,7 +14,7 @@ module Pwinty
   class AuthenticationError < Pwinty::Error; end
   class InvalidContentTypeHeader < Pwinty::Error; end
   class MethodNotAllowed < Pwinty::Error; end
-  class OrderNotFound < Pwinty::Error; end
+  class NotFound < Pwinty::Error; end
   class StateIsInvalid < Pwinty::Error; end
   class ValidationError < Pwinty::Error; end
 

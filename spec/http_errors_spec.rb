@@ -26,4 +26,11 @@ RSpec.describe Pwinty::HttpErrors do
       )
     end
   end
+
+  it "will report NotFound errors" do
+    VCR.use_cassette('http_errors/not_found') do
+      expect { order = Pwinty::Order.find('ord_9') }.to raise_error(Pwinty::NotFound)
+    end
+  end
+
 end
