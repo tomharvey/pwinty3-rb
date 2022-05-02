@@ -75,7 +75,6 @@ to understand the full list of attributes to send.
 
 ``` ruby
 order = Pwinty::Order.new(
-<<<<<<< HEAD
   shippingMethod: "Budget",
   recipient: {
     name: "Tom Harvey",
